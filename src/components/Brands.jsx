@@ -29,7 +29,7 @@ const Brands = () => {
           {[...brands, ...brands].map((brand, idx) => (
             <div 
               key={idx} 
-              className="text-2xl md:text-3xl font-black text-slate-200 hover:text-accent transition-colors cursor-default select-none tracking-tighter"
+              className="text-2xl md:text-3xl font-black text-slate-400 hover:text-accent transition-colors cursor-default select-none tracking-tighter"
             >
               {brand}
             </div>

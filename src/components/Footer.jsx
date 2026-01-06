@@ -90,15 +90,15 @@ const Footer = () => {
           <div>
              <h4 className="font-bold text-lg mb-6 uppercase tracking-wider text-slate-900">Kontakt</h4>
              <p className="mb-4">
-               XT-Trade GmbH<br/>
-               Industriestraße 1<br/>
-               12345 Berlin
+               XT-Trade<br/>
+               Daimlerstr. 28<br/>
+               50170 Kerpen
              </p>
              <p className="text-accent font-bold text-xl">
-               030 123 456 78
+               +49 2273 4068100
              </p>
              <p className="text-sm mt-1">
-               Mo-Fr: 08:00 - 18:00
+               Mo-Do: 08:00 - 16:30
              </p>
           </div>
         </div>

@@ -81,10 +81,10 @@ const Testimonials = () => {
                 <img 
                   src={review.image} 
                   alt={review.name} 
-                  className="w-14 h-14 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 border-2 border-white shadow-md"
+                  className="w-14 h-14 rounded-full object-cover transition-all duration-500 border-2 border-white shadow-md"
                 />
                 <div>
-                  <h4 className="font-bold text-slate-900">{review.name}</h4>
+                  <h4 className="font-bold text-[#0F172A] group-hover:text-accent transition-colors duration-300">{review.name}</h4>
                   <p className="text-sm text-slate-500">{review.role}</p>
                 </div>
               </div>
@@ -113,7 +113,7 @@ const Testimonials = () => {
                 {["HOCHTIEF", "STRABAG", "VINCI", "BAM GROUP", "EIFFAGE", "ZÜBLIN", "GOLDBECK", "PORR"].concat(["HOCHTIEF", "STRABAG", "VINCI", "BAM GROUP", "EIFFAGE", "ZÜBLIN", "GOLDBECK", "PORR"]).map((brand, idx) => (
                   <span 
                     key={idx} 
-                    className="text-3xl font-black tracking-tighter text-slate-300 opacity-40 grayscale hover:text-accent hover:opacity-100 hover:grayscale-0 transition-all duration-300 cursor-default"
+                    className="text-3xl font-black tracking-tighter text-slate-700 opacity-70 hover:text-accent hover:opacity-100 transition-all duration-300 cursor-default"
                   >
                     {brand}
                   </span>
