@@ -89,7 +89,7 @@ const Categories = () => {
              className="max-w-2xl"
           >
             <h2 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-4">
-              CHOOSE YOUR <span className="text-accent">GEAR</span>
+              CHOOSE YOUR <span className="text-accent">NEED</span>
             </h2>
             <p className="text-slate-500 text-lg">
               Professionelle Ausrüstung für extreme Bedingungen. Wähle deine Kategorie.
