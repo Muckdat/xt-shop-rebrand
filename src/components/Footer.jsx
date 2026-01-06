@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 mb-20 border-b border-gray-200 pb-16">
           <div className="max-w-xl">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4 uppercase text-slate-900">
-              Join the <span className="text-accent">XT-Trade Crew</span>
+              Join the <span className="text-accent">System</span>
             </h2>
             <p className="text-slate-500 mb-8">
               Erhalte exklusive Angebote, Sicherheitstipps und News zu neuen Produkten direkt in dein Postfach.
