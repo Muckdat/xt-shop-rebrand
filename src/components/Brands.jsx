@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const brands = [
-  "U-POWER", "PUMA SAFETY", "ELTEN", "ALBATROS", "HELLY HANSEN", "ENGELBERT STRAUSS", "CARHARTT", "3M", "UVEX"
+  "U-POWER", "PUMA SAFETY", "ASATEX", "ALBATROS", "NITRAS", "LEIBWÄCHTER", "BP", "PROMODORO", "3M"
 ];
 
 const Brands = () => {

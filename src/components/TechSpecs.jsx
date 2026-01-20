@@ -138,33 +138,38 @@ const TechSpecs = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <span className="h-px w-12 bg-accent"></span>
-              <span className="text-accent font-bold tracking-widest uppercase">XT-Trade Technology</span>
+              <span className="text-accent font-bold tracking-widest uppercase">Geprüfte Qualität</span>
             </div>
-            
+
             <h2 className="text-5xl md:text-7xl font-extrabold text-slate-900 mb-8 leading-tight">
-              ENGINEERED FOR <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-600">IMPACT</span>
+              HÖCHSTE STANDARDS <br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-600">ERFÜLLT</span>
             </h2>
-            
+
             <p className="text-slate-600 text-lg leading-relaxed max-w-xl border-l-4 border-gray-200 pl-6">
-              Unsere Ausrüstung definiert den Standard neu. Wir kombinieren High-Tech Materialien 
-              mit ergonomischem Design, damit du dich auf das konzentrieren kannst, was zählt: 
-              Deine Arbeit.
+              Wir führen ausschließlich zertifizierte Arbeitsschutz-Produkte führender Hersteller.
+              Von ISO-Normen bis zu Spezialanforderungen – unsere Experten beraten Sie zu den
+              passenden Lösungen für Ihre individuellen Sicherheitsanforderungen.
             </p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
              initial={{ opacity: 0, scale: 0.8 }}
              whileInView={{ opacity: 1, scale: 1 }}
              viewport={{ once: true }}
              className="lg:w-1/2 flex justify-end"
           >
-             <button className="group relative px-8 py-4 bg-slate-900 text-white font-bold rounded-full overflow-hidden shadow-2xl hover:shadow-accent/50 transition-all duration-300">
+             <a
+               href="https://www.xt-trade.com/Schutzkleidung"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="group relative px-8 py-4 bg-slate-900 text-white font-bold rounded-full overflow-hidden shadow-2xl hover:shadow-accent/50 transition-all duration-300 inline-flex items-center"
+             >
                <span className="relative z-10 flex items-center gap-3">
                  DIREKT ZUR SCHUTZBEKLEIDUNG <ArrowRight className="group-hover:translate-x-1 transition-transform"/>
                </span>
                <div className="absolute inset-0 bg-accent transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-             </button>
+             </a>
           </motion.div>
         </div>
 

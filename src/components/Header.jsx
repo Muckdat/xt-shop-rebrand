@@ -104,12 +104,13 @@ const Header = () => {
     >
       <div className={`container mx-auto px-6 flex items-center justify-between transition-all duration-300 ${isScrolled || activeMenu ? 'py-4' : 'py-6'}`}>
         {/* Logo */}
-        <div className="flex items-center gap-2 relative z-50">
-          <div className="w-10 h-8 bg-accent rounded-sm flex items-center justify-center shadow-sm px-1">
-             <span className="font-bold text-white text-lg">XT</span>
-          </div>
-          <span className={`text-2xl font-bold tracking-tighter transition-colors duration-300 ${textColorClass}`}>XT-TRADE</span>
-        </div>
+        <a href="#" className="relative z-50">
+          <img
+            src="https://assets.watara.services/xt/assets/XT-Logo_v2_277x49.png"
+            alt="XT-Trade Logo"
+            className="h-8 md:h-10 w-auto transition-all duration-300"
+          />
+        </a>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8 h-full relative z-50">

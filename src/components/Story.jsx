@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { CheckCircle2, Award, Hammer } from 'lucide-react';
+import { CheckCircle2, Package, Settings } from 'lucide-react';
 
 const Story = () => {
   const containerRef = useRef(null);
@@ -24,36 +24,36 @@ const Story = () => {
         
         {/* Header Section */}
         <div className="text-center max-w-4xl mx-auto mb-24">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 text-accent font-bold tracking-[0.2em] uppercase mb-4 border border-accent/30 px-4 py-2 rounded-full bg-accent/5 backdrop-blur-sm"
           >
-            <Award size={16} /> Since 1995
+            <CheckCircle2 size={16} /> Ihr Partner im Arbeitsschutz
           </motion.div>
-          
-          <motion.h2 
+
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
             className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8"
           >
-            SCHUTZ IST UNSERE <br />
+            SCHUTZ IST UNSERE<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-600">DNA</span>
           </motion.h2>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
             className="text-slate-400 text-xl leading-relaxed"
           >
-            Was als kleine Manufaktur für Spezialhandschuhe begann, ist heute Europas führender 
-            Ausstatter für extreme Arbeitsbedingungen. Wir verkaufen keine Produkte – wir verkaufen 
-            die Gewissheit, abends sicher nach Hause zu kommen.
+            XT-TRADE ist Ihr verlässlicher Partner für PSA, Schutz- und Arbeitsbekleidung.
+            Wir vereinen Sicherheit, Funktionalität und professionelles Design – gern auch zugeschnitten auf Sie. Von der Bedarfsanalyse über Veredelung bis zur
+            Logistik: Alles aus einer Hand.
           </motion.p>
         </div>
 
@@ -87,8 +87,8 @@ const Story = () => {
               />
               {/* Overlay Badge */}
               <div className="absolute bottom-6 right-6 bg-white text-slate-900 p-4 rounded-lg shadow-lg max-w-[150px]">
-                <div className="text-3xl font-extrabold text-accent">50+</div>
-                <div className="text-xs font-bold uppercase leading-tight">Jahre Erfahrung am Markt</div>
+                <div className="text-3xl font-extrabold text-accent">360°</div>
+                <div className="text-xs font-bold uppercase leading-tight">Arbeitsschutz Komplett-Service</div>
               </div>
             </motion.div>
           </div>
@@ -107,18 +107,18 @@ const Story = () => {
              <div className="space-y-8">
                {[
                  {
-                   title: "Unkompromisslose Qualität",
-                   text: "Jede Naht, jedes Material und jeder Prototyp wird in unserem eigenen Labor bis zur Belastungsgrenze getestet. 'Gut genug' gibt es bei uns nicht.",
-                   icon: Award
+                   title: "Individuelle Lösungen & Flexibilität",
+                   text: "Durch etablierte Produktionspartnerschaften und kurze Entscheidungswege realisieren wir passgenaue Arbeitsschutzlösungen – von Sondergrößen bis kundenspezifischen Ausstattungen, wirtschaftlich und normgerecht.",
+                   icon: Settings
                  },
                  {
-                   title: "Innovation durch Praxis",
-                   text: "Wir entwickeln nicht am Reißbrett, sondern auf der Baustelle. Unser Feedback kommt direkt von denen, die unsere Ausrüstung jeden Tag tragen.",
-                   icon: Hammer
+                   title: "Komplettservice: Veredelung & Logistik",
+                   text: "Wir übernehmen die komplette Veredelung Ihrer Arbeitskleidung mit Stick, Transfer oder Siebdruck. Dezentrale Lieferkonzepte direkt an Ihre Standorte reduzieren Aufwände und sichern kurze Lieferzeiten.",
+                   icon: Package
                  },
                  {
-                   title: "Nachhaltiger Schutz",
-                   text: "Sicherheit darf nicht auf Kosten der Umwelt gehen. Wir setzen auf langlebige Materialien und recycelbare Verpackungen.",
+                   title: "Wirtschaftlichkeit trifft Qualität",
+                   text: "Transparente Beratung, lösungsorientiertes Handeln und optimales Kosten-Nutzen-Verhältnis: Wir kombinieren hochwertigen Arbeitsschutz mit wirtschaftlicher Beschaffung für langfristige Partnerschaften.",
                    icon: CheckCircle2
                  }
                ].map((item, idx) => (
@@ -141,15 +141,18 @@ const Story = () => {
                ))}
              </div>
 
-             <motion.button 
+             <motion.a
+               href="https://www.xt-trade.com/Ueber-uns"
+               target="_blank"
+               rel="noopener noreferrer"
                initial={{ opacity: 0 }}
                whileInView={{ opacity: 1 }}
                viewport={{ once: true }}
                transition={{ delay: 0.8 }}
-               className="mt-8 px-8 py-4 bg-white text-slate-900 font-bold uppercase tracking-widest hover:bg-accent hover:text-white transition-all duration-300 rounded-sm"
+               className="mt-8 px-8 py-4 bg-white text-slate-900 font-bold uppercase tracking-widest hover:bg-accent hover:text-white transition-all duration-300 rounded-sm inline-block"
              >
                Mehr über uns
-             </motion.button>
+             </motion.a>
           </div>
         </div>
       </div>

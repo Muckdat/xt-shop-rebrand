@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from './components/Hero';
 import Brands from './components/Brands';
+import BrandsLogos from './components/BrandsLogos';
 import Header from './components/Header';
 import Categories from './components/Categories';
 import FeaturedProducts from './components/FeaturedProducts';
@@ -15,8 +16,8 @@ function App() {
       <Header />
       <Hero />
       <Brands />
+      <BrandsLogos />
       <Categories />
-      <FeaturedProducts />
       <Story />
       <TechSpecs />
       <Testimonials />
