@@ -24,7 +24,7 @@ const products = [
     price: "89,90 €",
     image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1936&auto=format&fit=crop",
     rating: 4,
-    tag: "NEW"
+    tag: "NEU"
   },
   {
     id: 3,
@@ -121,7 +121,7 @@ const FeaturedProducts = () => {
         <div className="flex items-end justify-between mb-12">
            <div>
               <span className="text-accent font-bold tracking-widest uppercase mb-2 block">Ausgewählte Favoriten</span>
-              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900">TRENDING <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500">GEAR</span></h2>
+              <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900">ANGESAGTE <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500">AUSRÜSTUNG</span></h2>
            </div>
            
            <div className="hidden md:flex gap-2">

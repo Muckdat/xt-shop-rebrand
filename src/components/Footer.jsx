@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 mb-20 border-b border-gray-200 pb-16">
           <div className="max-w-xl">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4 uppercase text-slate-900">
-              Join the <span className="text-accent">System</span>
+              Erhalte NEWS und <span className="text-accent">UPDATES</span>
             </h2>
             <p className="text-slate-500 mb-8">
               Erhalte exklusive Angebote, Sicherheitstipps und News zu neuen Produkten direkt in dein Postfach.
@@ -105,7 +105,7 @@ const Footer = () => {
 
         {/* Bottom Section: Copyright & Payment */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-gray-200 text-sm">
-          <p>© 2026 XT-Trade. All rights reserved.</p>
+          <p>© 2026 XT-Trade. Alle Rechte vorbehalten.</p>
           <div className="flex items-center gap-4 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
              <span className="flex items-center gap-2"><CreditCard size={18}/> VISA</span>
              <span className="flex items-center gap-2"><CreditCard size={18}/> PayPal</span>

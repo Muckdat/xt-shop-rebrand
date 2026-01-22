@@ -3,11 +3,18 @@ import { motion } from 'framer-motion';
 
 const brands = [
   { name: "U-POWER", logo: "https://assets.watara.services/xt/assets/u-power.svg" },
+  { name: "COVERSTAR", logo: "https://assets.watara.services/xt/assets/cstar.svg" },
   { name: "PUMA SAFETY", logo: "https://assets.watara.services/xt/assets/puma-safety.svg" },
-  { name: "ASATEX", logo: "https://assets.watara.services/xt/assets/asatex.svg" },
-  { name: "NITRAS", logo: "https://assets.watara.services/xt/assets/nitras.svg" },
+  { name: "COVERFLASH", logo: "https://assets.watara.services/xt/assets/cflash.svg" },
+  { name: "NITRAS", logo: "https://assets.watara.services/xt/assets/nitras-safety.svg" },
+  { name: "PREVENT TRENDLINE", logo: "https://assets.watara.services/xt/assets/prevent-trendline.svg" },
   { name: "LEIBWÄCHTER", logo: "https://assets.watara.services/xt/assets/leibweachter.svg" },
-  { name: "BP", logo: "https://assets.watara.services/xt/assets/bp.svg" }
+  { name: "ALBATROSS", logo: "https://assets.watara.services/xt/assets/albatross.svg" },
+  { name: "COVERCHEM200", logo: "https://assets.watara.services/xt/assets/cchem200.svg" },
+  { name: "BP", logo: "https://assets.watara.services/xt/assets/bp.svg" },
+  { name: "PROMODORO", logo: "https://assets.watara.services/xt/assets/promodoro.svg" },
+  { name: "COVERBASE", logo: "https://assets.watara.services/xt/assets/cbase.svg" },
+  { name: "PROMODORO", logo: "https://assets.watara.services/xt/assets/jamesnicholson.svg" }
 ];
 
 const BrandsLogos = () => {
@@ -15,7 +22,7 @@ const BrandsLogos = () => {
     <div className="py-16 bg-gray-50 border-b border-gray-200 overflow-hidden">
       <div className="container mx-auto px-6 mb-8 text-center">
         <span className="text-xs font-bold tracking-[0.3em] text-gray-400 uppercase">
-          Vertrauensvolle Partnermarken
+          Unsere Markenwelt
         </span>
       </div>
 

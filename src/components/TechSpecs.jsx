@@ -69,7 +69,7 @@ const FlipCard = ({ feature, index }) => {
           </h3>
           <div className="mt-6 flex items-center gap-2 text-xs font-bold text-accent uppercase tracking-widest opacity-60">
             <MousePointerClick size={14} />
-            Click to Flip
+             
           </div>
           
           {/* Decorative Corner */}
@@ -116,13 +116,6 @@ const TechSpecs = () => {
 
   return (
     <section ref={ref} className="relative py-32 overflow-hidden bg-gray-50">
-      
-      {/* Dynamic Background Lines */}
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-gray-300 to-transparent" />
-        <div className="absolute top-0 left-2/4 w-px h-full bg-gradient-to-b from-transparent via-gray-300 to-transparent delay-75" />
-        <div className="absolute top-0 left-3/4 w-px h-full bg-gradient-to-b from-transparent via-gray-300 to-transparent delay-150" />
-      </div>
 
       <div className="absolute inset-0 z-0 h-[120%] -top-[10%] opacity-5 pointer-events-none">
         <motion.div style={{ y: yBg }} className="w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></motion.div>

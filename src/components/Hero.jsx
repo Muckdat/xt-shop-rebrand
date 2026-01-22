@@ -11,40 +11,44 @@ import 'swiper/css/effect-fade';
 
 const SlideContent = ({ title, subtitle, buttonText, isActive }) => {
   return (
-    <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
-      <div className="max-w-4xl mx-auto space-y-6">
+    <div className="absolute inset-0 z-20 flex flex-col items-center justify-end px-4 pb-20 md:pb-24">
+      <div className="w-full max-w-7xl mx-auto">
         {isActive && (
           <>
+            {/* Subtitle - centered */}
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="text-xl md:text-2xl font-semibold tracking-widest text-accent uppercase"
+              className="text-base md:text-lg font-semibold tracking-widest text-accent uppercase text-center mb-3 md:mb-4"
             >
               {subtitle}
             </motion.h2>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-              className="text-5xl md:text-7xl lg:text-9xl font-extrabold text-white tracking-tight leading-tight"
-            >
-              {title}
-            </motion.h1>
+            {/* Title and Button - in one line (no wrap) */}
+            <div className="flex items-center justify-center gap-3 md:gap-5">
+              <motion.h1
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                className="text-3xl md:text-5xl lg:text-7xl font-extrabold text-white tracking-tight whitespace-nowrap"
+              >
+                {title}
+              </motion.h1>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="pt-8"
-            >
-              <button className="group relative inline-flex items-center gap-3 px-8 py-4 bg-accent text-white font-bold text-lg tracking-wide hover:bg-white hover:text-black transition-all duration-300 rounded-sm overflow-hidden">
-                <span className="relative z-10">{buttonText}</span>
-                <ArrowRight className="w-6 h-6 relative z-10 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></div>
-              </button>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="flex-shrink-0"
+              >
+                <button className="group relative inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 bg-accent text-white font-bold text-sm md:text-base tracking-wide hover:bg-white hover:text-black transition-all duration-300 rounded-sm overflow-hidden whitespace-nowrap">
+                  <span className="relative z-10">{buttonText}</span>
+                  <ArrowRight className="w-4 h-4 md:w-5 md:h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+                  <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></div>
+                </button>
+              </motion.div>
+            </div>
           </>
         )}
       </div>
@@ -88,10 +92,10 @@ const Hero = () => {
               />
 
               {/* Content */}
-              <SlideContent 
+              <SlideContent
                 isActive={isActive}
-                subtitle="Ultimate Protection"
-                title="BUILT FOR EXTREMES"
+                subtitle="Ultimativer Schutz"
+                title="FÜR EXTREME GEBAUT"
                 buttonText="Jetzt Einkaufen"
               />
             </div>
@@ -118,10 +122,10 @@ const Hero = () => {
               </video>
 
               {/* Content */}
-              <SlideContent 
+              <SlideContent
                 isActive={isActive}
-                subtitle="Next Level Safety"
-                title="REDEFINING WORKWEAR"
+                subtitle="Sicherheit der nächsten Stufe"
+                title="ARBEITSKLEIDUNG NEU GEDACHT"
                 buttonText="Kollektion entdecken"
               />
             </div>

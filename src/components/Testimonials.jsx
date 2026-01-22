@@ -5,41 +5,38 @@ import { Building2, Users, Calendar } from 'lucide-react';
 const reviews = [
   {
     id: 1,
-    name: "Markus Schmidt",
-    role: "Bauleiter",
-    company: "HOCHTIEF AG",
-    text: "Nach der Umstellung auf XT-Trade Sicherheitsschuhe S3 konnten wir die Ausfallzeiten aufgrund von Fußverletzungen um 40% reduzieren. Die Kombination aus Tragekomfort und Sicherheitsstandards überzeugt auch nach 12-Stunden-Schichten auf der Baustelle.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop",
+    sector: "Industriereinigung",
+    company: "Indutec International Holding",
+    text: "Im Rahmen der Zusammenarbeit mit Indutec International Holding konnten arbeitsschutzrelevante Herausforderungen im industriellen Reinigungsumfeld gezielt bewältigt werden. Mitarbeitende sind dort regelmäßig chemischen Risiken ausgesetzt, insbesondere durch alkalische und saure Reinigungsmittel, Lösungsmittel, Öle, Fette sowie potenziell gesundheitsgefährdende Dämpfe und Aerosole. Durch XT-TRADE wurden geeignete persönliche Schutzausrüstungen bereitgestellt, darunter chemikalienbeständige Schutzkleidung, Handschuhe und Atemschutzlösungen. Ergänzend wurde eine fachgerechte Beratung zur normkonformen Auswahl und zum korrekten Einsatz der PSA durchgeführt, wodurch die Sicherheit erhöht und gesetzliche Arbeitsschutzanforderungen zuverlässig erfüllt wurden.",
+    logo: "https://assets.watara.services/xt/assets/indutec.svg",
     stats: [
-      { icon: Users, label: "200+ Mitarbeiter ausgestattet" },
-      { icon: Calendar, label: "Partner seit 2020" },
-      { icon: Building2, label: "5 Großbaustellen" }
+      { icon: Users, label: "4000 Mitarbeiter" },
+      { icon: Calendar, label: "Partner seit 2019" },
+      { icon: Building2, label: "" }
     ]
   },
   {
     id: 2,
-    name: "Sarah Weber",
-    role: "Sicherheitsbeauftragte",
-    company: "STRABAG AG",
-    text: "Wir haben unsere gesamte Flotte mit der XT-Trade Workwear-Kollektion ausgestattet. Die Langlebigkeit der Materialien hat unsere Beschaffungskosten um 25% gesenkt und die Mitarbeiterzufriedenheit messbar erhöht.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop",
+    sector: "Hoch- und Tiefbau",
+    company: "Maaßen Erdbewegungen-Transporte",
+    text: "Im Zuge der Zusammenarbeit mit der Maaßen Erdbewegungen-Transporte GmbH konnten arbeitsschutzrelevante Herausforderungen im Bau- und Transportumfeld erfolgreich bewältigt werden. Mitarbeitende sind dort baulichen Risiken ausgesetzt, insbesondere durch Erd- und Abbrucharbeiten, den Einsatz schwerer Baumaschinen, Absturz- und Quetschgefahren, Staub- und Lärmbelastung sowie den Umgang mit scharfkantigen Materialien. Durch XT-TRADE wurde normgerechte persönliche Schutzausrüstung bereitgestellt, darunter Schutzhelme, Warnschutzkleidung, Sicherheitsschuhe und Atemschutz. Ergänzend erfolgte eine fachliche Beratung zur sachgerechten Anwendung, wodurch Sicherheitsstandards erhöht und gesetzliche Vorgaben zuverlässig eingehalten wurden.",
+    logo: "https://assets.watara.services/xt/assets/maassen.svg",
     stats: [
-      { icon: Users, label: "350+ Mitarbeiter" },
-      { icon: Calendar, label: "Seit 2019" },
-      { icon: Building2, label: "Bundesweit" }
+      { icon: Users, label: "50+ Mitarbeiter" },
+      { icon: Calendar, label: "Seit 2021" },
+      { icon: Building2, label: "" }
     ]
   },
   {
     id: 3,
-    name: "Thomas Meyer",
-    role: "Leiter Arbeitssicherheit",
-    company: "INDUSTRIAL SERVICES GMBH",
-    text: "Für Industriekletterarbeiten ist Vertrauen in die PSA essentiell. Die XT-Trade Ausrüstung erfüllt nicht nur alle Sicherheitsnormen, sondern hat sich auch unter extremsten Witterungsbedingungen bewährt. Kein einziger Ausfall in 3 Jahren.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop",
+    sector: "Facility und Gebäudemanagement",
+    company: "Peterhoff Unternehmensgruppe",
+    text: "Im Rahmen der Unterstützung der Peterhoff Unternehmensgruppe konnten arbeitsschutzrelevante Herausforderungen im Gebäudemanagement erfolgreich gemeistert werden. Mitarbeitende sind dort baulichen und betrieblichen Risiken ausgesetzt, insbesondere durch Arbeiten auf Leitern und Gerüsten, nasse und rutschige Untergründe, den Umgang mit Reinigungschemikalien sowie Verkehrsflächen und schwere Reinigungstechnik. Durch XT-TRADE wurden geeignete persönliche Schutzausrüstungen bereitgestellt, darunter Schutzhelme, rutschfeste Sicherheitsschuhe, Handschuhe und Auffanggurte, und eine fachkundige Beratung zur sachgemäßen Anwendung durchgeführt, wodurch Sicherheitsstandards erhöht und gesetzliche Vorgaben zuverlässig eingehalten wurden.",
+    logo: "https://assets.watara.services/xt/assets/peterhoff.svg",
     stats: [
-      { icon: Users, label: "45 Spezialisten" },
-      { icon: Calendar, label: "Partner seit 2021" },
-      { icon: Building2, label: "Höhenarbeiten" }
+      { icon: Users, label: "3500+ Spezialisten" },
+      { icon: Calendar, label: "Partner seit 2023" },
+      { icon: Building2, label: "" }
     ]
   }
 ];
@@ -66,7 +63,7 @@ const Testimonials = () => {
             VERTRAUEN DURCH <span className="text-accent">ERGEBNISSE</span>
           </motion.h2>
           <p className="text-slate-500 text-lg">
-            Führende Unternehmen aus Bau, Industrie und Handwerk setzen auf XT-Trade.
+            Führende Unternehmen aus Bau, Industrie und Facilitymanagement setzen auf XT-Trade.
           </p>
         </div>
 
@@ -103,54 +100,23 @@ const Testimonials = () => {
                 ))}
               </div>
 
-              {/* Person Info */}
+              {/* Company Logo & Sector */}
               <div className="flex items-center gap-4">
-                <img
-                  src={review.image}
-                  alt={review.name}
-                  className="w-12 h-12 rounded object-cover border-2 border-gray-200"
-                />
+                <div className="w-20 h-12 flex items-center justify-center bg-gray-50 rounded border border-gray-200 p-2">
+                  <img
+                    src={review.logo}
+                    alt={review.company}
+                    className="w-full h-full object-contain grayscale opacity-60"
+                  />
+                </div>
                 <div>
-                  <h4 className="font-bold text-slate-900 text-sm">{review.name}</h4>
-                  <p className="text-xs text-slate-500">{review.role}</p>
+                  <p className="text-xs text-slate-500">Branche</p>
+                  <h4 className="font-bold text-slate-900 text-sm">{review.sector}</h4>
+                  
                 </div>
               </div>
             </motion.div>
           ))}
-        </div>
-        
-        {/* Brand Logos Carousel */}
-        <div className="mt-32 pt-16 border-t border-gray-100 overflow-hidden relative">
-           <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-white px-6 py-2">
-              <span className="text-[10px] font-bold tracking-[0.4em] text-gray-300 uppercase whitespace-nowrap">
-                PROJEKTPARTNER & KUNDEN
-              </span>
-           </div>
-
-           <div className="flex relative mt-4">
-              <motion.div 
-                animate={{ x: ["0%", "-50%"] }}
-                transition={{ 
-                  duration: 25, 
-                  repeat: Infinity, 
-                  ease: "linear" 
-                }}
-                className="flex flex-nowrap gap-24 items-center whitespace-nowrap"
-              >
-                {["HOCHTIEF", "STRABAG", "VINCI", "BAM GROUP", "EIFFAGE", "ZÜBLIN", "GOLDBECK", "PORR"].concat(["HOCHTIEF", "STRABAG", "VINCI", "BAM GROUP", "EIFFAGE", "ZÜBLIN", "GOLDBECK", "PORR"]).map((brand, idx) => (
-                  <span 
-                    key={idx} 
-                    className="text-3xl font-black tracking-tighter text-slate-700 opacity-70 hover:text-accent hover:opacity-100 transition-all duration-300 cursor-default"
-                  >
-                    {brand}
-                  </span>
-                ))}
-              </motion.div>
-              
-              {/* Fade Overlays */}
-              <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
-              <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
-           </div>
         </div>
       </div>
     </section>

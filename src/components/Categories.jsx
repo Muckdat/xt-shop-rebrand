@@ -8,27 +8,27 @@ const categories = [
     title: "Einwegprodukte",
     subtitle: "Maximaler Einwegschutz",
     size: "large",
-    image: "https://images.unsplash.com/photo-1584467735815-f778f274e296?q=80&w=1974&auto=format&fit=crop",
+    image: "https://assets.watara.services/xt/assets/coverchem200.jpg",
     link: "#",
     products: [
       {
         id: 1,
         name: "Overall Type 5/6 Weiß",
-        image: "https://images.unsplash.com/photo-1584467735815-f778f274e296?q=80&w=400&auto=format&fit=crop",
+        image: "https://assets.watara.services/xt/assets/cp500.jpg",
         price: "12,90 €",
         link: "#"
       },
       {
         id: 2,
-        name: "SMS Overall Pro Blau",
-        image: "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?q=80&w=400&auto=format&fit=crop",
+        name: "Nitrilhandschuhe Blau",
+        image: "https://assets.watara.services/xt/assets/nitrilhandschuhe.jpg",
         price: "15,90 €",
         link: "#"
       },
       {
         id: 3,
         name: "Chemikalienschutz XL",
-        image: "https://images.unsplash.com/photo-1603217039863-aa23c93a8c99?q=80&w=400&auto=format&fit=crop",
+        image: "https://assets.watara.services/xt/assets/schutzanzug.jpg",
         price: "24,90 €",
         link: "#"
       },
@@ -52,21 +52,21 @@ const categories = [
       {
         id: 1,
         name: "Arbeitshose Stretch",
-        image: "https://images.unsplash.com/photo-1594938291221-94f18cbb5660?q=80&w=400&auto=format&fit=crop",
+        image: "https://assets.watara.services/xt/assets/hose-stretch.jpg",
         price: "79,90 €",
         link: "#"
       },
       {
         id: 2,
-        name: "Arbeitsjacke Winter",
-        image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=400&auto=format&fit=crop",
+        name: "Moderne Bundjacke",
+        image: "https://assets.watara.services/xt/assets/jacke-stretch.jpg",
         price: "129,00 €",
         link: "#"
       },
       {
         id: 3,
         name: "Warnschutz Weste",
-        image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=400&auto=format&fit=crop",
+        image: "https://assets.watara.services/xt/assets/warnschutzweste.jpg",
         price: "34,90 €",
         link: "#"
       }
@@ -90,14 +90,14 @@ const categories = [
       {
         id: 2,
         name: "Schutzhelm Modern",
-        image: "https://images.unsplash.com/photo-1582142737525-24d14c24388e?q=80&w=400&auto=format&fit=crop",
+        image: "https://assets.watara.services/xt/assets/schutzhelm.jpg",
         price: "24,90 €",
         link: "#"
       },
       {
         id: 3,
         name: "Schnittschutz Handschuhe",
-        image: "https://images.unsplash.com/photo-1590779033100-9f60705a2f3b?q=80&w=400&auto=format&fit=crop",
+        image: "https://assets.watara.services/xt/assets/handschuhe.jpg",
         price: "19,90 €",
         link: "#"
       }
@@ -117,7 +117,7 @@ const ProductPopup = ({ products, categoryTitle }) => {
       {/* Header */}
       <div className="mb-6 text-center">
         <h4 className="text-2xl font-extrabold text-white uppercase tracking-tight mb-1">{categoryTitle}</h4>
-        <p className="text-sm text-gray-300">Beliebte Produkte</p>
+        <p className="text-sm text-gray-300"> </p>
       </div>
 
       {/* Product Grid - Horizontal */}
@@ -231,10 +231,10 @@ const Categories = () => {
              className="max-w-2xl"
           >
             <h2 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-4">
-              CHOOSE YOUR <span className="text-accent">NEED</span>
+              IHRE ANFORDERUNGEN - UNSERE <span className="text-accent">LÖSUNGEN</span>
             </h2>
             <p className="text-slate-500 text-lg">
-              Professionelle Ausrüstung für extreme Bedingungen. Wähle deine Kategorie.
+              Professionelle Ausrüstung für extreme Bedingungen.
             </p>
           </motion.div>
 
