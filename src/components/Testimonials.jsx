@@ -7,7 +7,7 @@ const reviews = [
     id: 1,
     sector: "Industriereinigung",
     company: "Indutec International Holding",
-    text: "Im Rahmen der Zusammenarbeit mit Indutec International Holding konnten arbeitsschutzrelevante Herausforderungen im industriellen Reinigungsumfeld gezielt bewältigt werden. Mitarbeitende sind dort regelmäßig chemischen Risiken ausgesetzt, insbesondere durch alkalische und saure Reinigungsmittel, Lösungsmittel, Öle, Fette sowie potenziell gesundheitsgefährdende Dämpfe und Aerosole. Durch XT-TRADE wurden geeignete persönliche Schutzausrüstungen bereitgestellt, darunter chemikalienbeständige Schutzkleidung, Handschuhe und Atemschutzlösungen. Ergänzend wurde eine fachgerechte Beratung zur normkonformen Auswahl und zum korrekten Einsatz der PSA durchgeführt, wodurch die Sicherheit erhöht und gesetzliche Arbeitsschutzanforderungen zuverlässig erfüllt wurden.",
+    text: "Im Rahmen der Zusammenarbeit mit Indutec International Holding konnten arbeitsschutzrelevante Herausforderungen im industriellen Reinigungsumfeld gezielt bewältigt werden. Mitarbeitende sind dort regelmäßig chemischen Risiken ausgesetzt, insbesondere durch alkalische und saure Reinigungsmittel, Lösungsmittel, Öle, Fette sowie potenziell gesundheitsgefährdende Dämpfe und Aerosole. Es wurden geeignete persönliche Schutzausrüstungen bereitgestellt, darunter chemikalienbeständige Schutzkleidung, Handschuhe und Atemschutzlösungen. Ergänzend wurde eine fachgerechte Beratung zur normkonformen Auswahl und zum korrekten Einsatz der PSA durchgeführt, wodurch die Sicherheit erhöht und gesetzliche Arbeitsschutzanforderungen zuverlässig erfüllt wurden.",
     logo: "https://assets.watara.services/xt/assets/indutec.svg",
     stats: [
       { icon: Users, label: "4000 Mitarbeiter" },
@@ -18,7 +18,7 @@ const reviews = [
     id: 2,
     sector: "Hoch- und Tiefbau",
     company: "Maaßen Erdbewegungen-Transporte",
-    text: "Im Zuge der Zusammenarbeit mit der Maaßen Erdbewegungen-Transporte GmbH konnten arbeitsschutzrelevante Herausforderungen im Bau- und Transportumfeld erfolgreich bewältigt werden. Mitarbeitende sind dort baulichen Risiken ausgesetzt, insbesondere durch Erd- und Abbrucharbeiten, den Einsatz schwerer Baumaschinen, Absturz- und Quetschgefahren, Staub- und Lärmbelastung sowie den Umgang mit scharfkantigen Materialien. Durch XT-TRADE wurde normgerechte persönliche Schutzausrüstung bereitgestellt, darunter Schutzhelme, Warnschutzkleidung, Sicherheitsschuhe und Atemschutz. Ergänzend erfolgte eine fachliche Beratung zur sachgerechten Anwendung, wodurch Sicherheitsstandards erhöht und gesetzliche Vorgaben zuverlässig eingehalten wurden.",
+    text: "Im Zuge der Zusammenarbeit mit der Maaßen Erdbewegungen-Transporte GmbH konnten arbeitsschutzrelevante Herausforderungen im Bau- und Transportumfeld erfolgreich bewältigt werden. Mitarbeitende sind dort baulichen Risiken ausgesetzt, insbesondere durch Erd- und Abbrucharbeiten, den Einsatz schwerer Baumaschinen, Absturz- und Quetschgefahren, Staub- und Lärmbelastung sowie den Umgang mit scharfkantigen Materialien. Es wurde PSA bereitgestellt, darunter Schutzhelme, Warnschutzkleidung, Sicherheitsschuhe und Atemschutz. Ergänzend erfolgte eine fachliche Beratung zur sachgerechten Anwendung, wodurch Sicherheitsstandards erhöht und gesetzliche Vorgaben zuverlässig eingehalten wurden.",
     logo: "https://assets.watara.services/xt/assets/maassen.svg",
     stats: [
       { icon: Users, label: "50+ Mitarbeiter" },
@@ -29,7 +29,7 @@ const reviews = [
     id: 3,
     sector: "Facility und Gebäudemanagement",
     company: "Peterhoff Unternehmensgruppe",
-    text: "Im Rahmen der Unterstützung der Peterhoff Unternehmensgruppe konnten arbeitsschutzrelevante Herausforderungen im Gebäudemanagement erfolgreich gemeistert werden. Mitarbeitende sind dort baulichen und betrieblichen Risiken ausgesetzt, insbesondere durch Arbeiten auf Leitern und Gerüsten, nasse und rutschige Untergründe, den Umgang mit Reinigungschemikalien sowie Verkehrsflächen und schwere Reinigungstechnik. Durch XT-TRADE wurden geeignete persönliche Schutzausrüstungen bereitgestellt, darunter Schutzhelme, rutschfeste Sicherheitsschuhe, Handschuhe und Auffanggurte, und eine fachkundige Beratung zur sachgemäßen Anwendung durchgeführt, wodurch Sicherheitsstandards erhöht und gesetzliche Vorgaben zuverlässig eingehalten wurden.",
+    text: "Im Rahmen der Unterstützung der Peterhoff Unternehmensgruppe konnten arbeitsschutzrelevante Herausforderungen im Gebäudemanagement erfolgreich gemeistert werden. Mitarbeitende sind dort baulichen und betrieblichen Risiken ausgesetzt, insbesondere durch Arbeiten auf Leitern und Gerüsten, nasse und rutschige Untergründe, den Umgang mit Reinigungschemikalien sowie Verkehrsflächen und schwere Reinigungstechnik. Durch XT-TRADE wurden geeignete Schutzprodukte, wie rutschfeste Sicherheitsschuhe, Handschuhe und individualisierte Arbeitsbekleidung eingesetzt, und eine fachkundige Beratung zur sachgemäßen Anwendung durchgeführt, wodurch Sicherheitsstandards erhöht und gesetzliche Vorgaben zuverlässig eingehalten wurden.",
     logo: "https://assets.watara.services/xt/assets/peterhoff.svg",
     stats: [
       { icon: Users, label: "3500 Mitarbeiter" },
