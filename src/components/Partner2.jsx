@@ -2,14 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const brands = [
-  { name: "U-POWER", logo: "https://assets.watara.services/xt/assets/u-power.svg" },
-  { name: "ASATEX", logo: "https://assets.watara.services/xt/assets/asatex.svg" },
-  { name: "PUMA SAFETY", logo: "https://assets.watara.services/xt/assets/puma-safety.svg" },
-  { name: "NITRAS", logo: "https://assets.watara.services/xt/assets/nitras-safety.svg" },
-  { name: "LEIBWÄCHTER", logo: "https://assets.watara.services/xt/assets/leibweachter.svg" },
-  { name: "ALBATROSS", logo: "https://assets.watara.services/xt/assets/albatross.svg" },
-  { name: "BP", logo: "https://assets.watara.services/xt/assets/bp.svg" },
-  { name: "PROMODORO", logo: "https://assets.watara.services/xt/assets/promodoro.svg" }
+  { name: "INDUTEC", logo: "https://assets.watara.services/xt/assets/indutec.svg" },
+  { name: "PETERHOFF", logo: "https://assets.watara.services/xt/assets/peterhoff.svg" },
+  { name: "MAAßEN", logo: "https://assets.watara.services/xt/assets/maassen.svg" },
+  { name: "IWAGO", logo: "https://assets.watara.services/xt/assets/iwago.svg" },
+  { name: "PAP", logo: "https://assets.watara.services/xt/assets/pap.svg" },
+  { name: "LOBBE", logo: "https://assets.watara.services/xt/assets/lobbe.svg" },
+  { name: "MATRIX", logo: "https://assets.watara.services/xt/assets/matrix.svg" },
+  { name: "STADT BERGHEIM", logo: "https://assets.watara.services/xt/assets/bergheim.svg" },
+  { name: "AZZA BAU", logo: "https://assets.watara.services/xt/assets/azza.svg" },
+  { name: "ATC", logo: "https://assets.watara.services/xt/assets/atc.svg" }
 ];
 
 const BrandsLogos = () => {

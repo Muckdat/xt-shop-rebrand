@@ -11,8 +11,7 @@ const reviews = [
     logo: "https://assets.watara.services/xt/assets/indutec.svg",
     stats: [
       { icon: Users, label: "4000 Mitarbeiter" },
-      { icon: Calendar, label: "Partner seit 2019" },
-      { icon: Building2, label: "" }
+      { icon: Calendar, label: "Partner seit 2019" }
     ]
   },
   {
@@ -23,8 +22,7 @@ const reviews = [
     logo: "https://assets.watara.services/xt/assets/maassen.svg",
     stats: [
       { icon: Users, label: "50+ Mitarbeiter" },
-      { icon: Calendar, label: "Seit 2021" },
-      { icon: Building2, label: "" }
+      { icon: Calendar, label: "Seit 2021" }
     ]
   },
   {
@@ -34,9 +32,8 @@ const reviews = [
     text: "Im Rahmen der Unterstützung der Peterhoff Unternehmensgruppe konnten arbeitsschutzrelevante Herausforderungen im Gebäudemanagement erfolgreich gemeistert werden. Mitarbeitende sind dort baulichen und betrieblichen Risiken ausgesetzt, insbesondere durch Arbeiten auf Leitern und Gerüsten, nasse und rutschige Untergründe, den Umgang mit Reinigungschemikalien sowie Verkehrsflächen und schwere Reinigungstechnik. Durch XT-TRADE wurden geeignete persönliche Schutzausrüstungen bereitgestellt, darunter Schutzhelme, rutschfeste Sicherheitsschuhe, Handschuhe und Auffanggurte, und eine fachkundige Beratung zur sachgemäßen Anwendung durchgeführt, wodurch Sicherheitsstandards erhöht und gesetzliche Vorgaben zuverlässig eingehalten wurden.",
     logo: "https://assets.watara.services/xt/assets/peterhoff.svg",
     stats: [
-      { icon: Users, label: "3500+ Spezialisten" },
-      { icon: Calendar, label: "Partner seit 2023" },
-      { icon: Building2, label: "" }
+      { icon: Users, label: "3500 Mitarbeiter" },
+      { icon: Calendar, label: "Partner seit 2023" }
     ]
   }
 ];
