@@ -26,7 +26,7 @@ const SlideContent = ({ title, subtitle, buttonText, isActive }) => {
             </motion.h2>
 
             {/* Title and Button - in one line (no wrap) */}
-            <div className="flex items-center justify-center gap-3 md:gap-5">
+            <div className="flex items-center justify-center gap-6 md:gap-10">
               <motion.h1
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
