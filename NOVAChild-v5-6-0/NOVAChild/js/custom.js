@@ -161,7 +161,164 @@
   };
 
   /* ============================================
-     5. Smooth Scroll for Anchor Links
+     5. Header Scroll – Transparent on landing, white on scroll
+     ============================================ */
+  var XTHeaderScroll = {
+    header: null,
+    topBar: null,
+    isLanding: false,
+    menuOpen: false,
+    bgElements: [],
+
+    init: function () {
+      this.header = document.getElementById('jtl-nav-wrapper');
+      if (!this.header) return;
+
+      this.topBar = document.getElementById('header-top-bar');
+      this.isLanding = !!document.querySelector('.xt-landing');
+
+      this.collectBgElements();
+      this.protectLogos();
+
+      if (this.isLanding) {
+        this.header.classList.add('xt-header-transparent');
+        if (this.topBar) this.topBar.classList.add('xt-header-transparent');
+      }
+
+      this.applyState();
+      this.bindScroll();
+      this.bindMegaMenu();
+
+      // Re-apply after CSS loads asynchronously (preload pattern)
+      var self = this;
+      window.addEventListener('load', function () {
+        self.collectBgElements();
+        self.protectLogos();
+        self.applyState();
+      });
+
+      // Safety retries: catch late-loading CSS or JS that overrides styles
+      setTimeout(function () { self.applyState(); self.protectLogos(); }, 500);
+      setTimeout(function () { self.applyState(); self.protectLogos(); }, 1500);
+    },
+
+    // Collect ALL elements inside header that might have backgrounds
+    collectBgElements: function () {
+      this.bgElements = [this.header];
+      var innerEls = this.header.querySelectorAll('div, nav, .navbar, .container, .container-fluid, .container-fluid-xl, .hide-navbar, .topbar-wrapper');
+      for (var i = 0; i < innerEls.length; i++) {
+        this.bgElements.push(innerEls[i]);
+      }
+      if (this.topBar) {
+        this.bgElements.push(this.topBar);
+        var topBarInner = this.topBar.querySelectorAll('div, nav, ul');
+        for (var j = 0; j < topBarInner.length; j++) {
+          this.bgElements.push(topBarInner[j]);
+        }
+      }
+    },
+
+    // Prevent NOVA lazy loading from hiding our logos
+    protectLogos: function () {
+      var logos = document.querySelectorAll('.xt-logo');
+      for (var i = 0; i < logos.length; i++) {
+        logos[i].classList.remove('lazyload');
+        logos[i].classList.add('lazyloaded');
+        logos[i].style.setProperty('opacity', '1', 'important');
+      }
+    },
+
+    // Set inline styles directly – overrides any CSS
+    setTransparent: function () {
+      for (var i = 0; i < this.bgElements.length; i++) {
+        this.bgElements[i].style.setProperty('background', 'transparent', 'important');
+        this.bgElements[i].style.setProperty('background-color', 'transparent', 'important');
+      }
+      this.header.style.setProperty('box-shadow', 'none', 'important');
+    },
+
+    setWhite: function () {
+      for (var i = 0; i < this.bgElements.length; i++) {
+        this.bgElements[i].style.setProperty('background', '#ffffff', 'important');
+        this.bgElements[i].style.setProperty('background-color', '#ffffff', 'important');
+      }
+      this.header.style.setProperty('box-shadow', '0 4px 6px -1px rgba(0,0,0,0.1)', 'important');
+    },
+
+    clearInlineStyles: function () {
+      for (var i = 0; i < this.bgElements.length; i++) {
+        this.bgElements[i].style.removeProperty('background');
+        this.bgElements[i].style.removeProperty('background-color');
+      }
+      this.header.style.removeProperty('box-shadow');
+    },
+
+    applyState: function () {
+      var scrolled = window.scrollY > 50;
+
+      if (scrolled || this.menuOpen) {
+        this.header.classList.add('xt-scrolled');
+        if (this.topBar) this.topBar.classList.add('xt-scrolled');
+        if (this.isLanding) {
+          this.setWhite();
+        }
+      } else {
+        this.header.classList.remove('xt-scrolled');
+        if (this.topBar) this.topBar.classList.remove('xt-scrolled');
+        if (this.isLanding) {
+          this.setTransparent();
+        }
+      }
+    },
+
+    bindScroll: function () {
+      var self = this;
+      var ticking = false;
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          window.requestAnimationFrame(function () {
+            self.applyState();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    },
+
+    bindMegaMenu: function () {
+      if (!this.isLanding) return;
+
+      var self = this;
+      var dropdowns = this.header.querySelectorAll('.dropdown');
+
+      dropdowns.forEach(function (dropdown) {
+        dropdown.addEventListener('mouseenter', function () {
+          self.menuOpen = true;
+          self.applyState();
+        });
+        dropdown.addEventListener('mouseleave', function () {
+          self.menuOpen = false;
+          self.applyState();
+        });
+      });
+
+      // Bootstrap collapse events for mobile menu
+      var mainNav = document.getElementById('mainNavigation');
+      if (mainNav && typeof $ !== 'undefined') {
+        $(mainNav).on('show.bs.collapse', function () {
+          self.menuOpen = true;
+          self.applyState();
+        });
+        $(mainNav).on('hidden.bs.collapse', function () {
+          self.menuOpen = false;
+          self.applyState();
+        });
+      }
+    }
+  };
+
+  /* ============================================
+     6. Smooth Scroll for Anchor Links
      ============================================ */
   var XTSmoothScroll = {
     init: function () {
@@ -182,6 +339,7 @@
      Initialize all modules on DOMContentLoaded
      ============================================ */
   document.addEventListener('DOMContentLoaded', function () {
+    XTHeaderScroll.init();
     XTHeroCarousel.init();
     XTScrollAnimator.init();
     XTCategoryPopups.init();

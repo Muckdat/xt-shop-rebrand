@@ -735,3 +735,298 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* ============================================
+   Header – Scroll Transition & Transparent State
+   ============================================ */
+
+/* Base transition for smooth scroll effect */
+#jtl-nav-wrapper,
+#jtl-nav-wrapper .navbar,
+#jtl-nav-wrapper nav.navbar,
+#jtl-nav-wrapper .hide-navbar,
+#jtl-nav-wrapper .container,
+#jtl-nav-wrapper .container-fluid {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* --- DEFAULT STATE --- */
+/* Nav link color: dark text on white bg */
+#jtl-nav-wrapper .nav-scrollbar-inner > .nav-item > .nav-link,
+#jtl-nav-wrapper .nav-scrollbar-inner > .nav-item > .nav-link span {
+  color: #0f172a !important;
+}
+
+/* Top bar styling */
+#header-top-bar,
+#header-top-bar a {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Top bar transparent state */
+#header-top-bar.xt-header-transparent:not(.xt-scrolled) a,
+#header-top-bar.xt-header-transparent:not(.xt-scrolled) span {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Background transitions handled by JS inline styles.
+   CSS handles text/logo/icon color transitions only. */
+#jtl-nav-wrapper,
+#jtl-nav-wrapper div,
+#jtl-nav-wrapper nav {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Logo Swap --- */
+/* Prevent NOVA lazy loading from hiding our logos */
+#jtl-nav-wrapper .xt-logo,
+header .navbar-brand .xt-logo,
+.xt-logo.lazyloaded,
+img.xt-logo {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Default: dark logo visible, white logo hidden */
+.xt-logo-dark {
+  display: inline-block !important;
+}
+.xt-logo-white {
+  display: none !important;
+}
+
+/* Transparent header: white logo visible, dark logo hidden */
+#jtl-nav-wrapper.xt-header-transparent:not(.xt-scrolled) .xt-logo-dark {
+  display: none !important;
+}
+#jtl-nav-wrapper.xt-header-transparent:not(.xt-scrolled) .xt-logo-white {
+  display: inline-block !important;
+}
+
+/* Logo responsive sizing – override NOVA's defaults */
+#jtl-nav-wrapper .xt-logo,
+header .navbar-brand .xt-logo,
+.xt-logo {
+  height: 2rem !important;
+  width: auto !important;
+  max-width: 200px !important;
+  max-height: none !important;
+  object-fit: contain;
+}
+
+@media (min-width: 992px) {
+  #jtl-nav-wrapper .xt-logo,
+  header .navbar-brand .xt-logo,
+  .xt-logo {
+    height: 2.5rem !important;
+  }
+}
+
+/* Override NOVA's default logo image styling */
+#jtl-nav-wrapper .xt-logo-link img,
+header .navbar-brand img.xt-logo {
+  height: auto;
+  max-height: none !important;
+  opacity: 1 !important;
+}
+
+/* --- Nav Links: White text in transparent state --- */
+#jtl-nav-wrapper.xt-header-transparent:not(.xt-scrolled) .nav-link,
+#jtl-nav-wrapper.xt-header-transparent:not(.xt-scrolled) .nav-link span {
+  color: #ffffff !important;
+}
+
+/* Burger menu icon white in transparent state */
+#jtl-nav-wrapper.xt-header-transparent:not(.xt-scrolled) .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Nav icon buttons white in transparent state */
+#jtl-nav-wrapper.xt-header-transparent:not(.xt-scrolled) .nav-icons-wrapper a,
+#jtl-nav-wrapper.xt-header-transparent:not(.xt-scrolled) .nav-icons-wrapper button,
+#jtl-nav-wrapper.xt-header-transparent:not(.xt-scrolled) .nav-icons-wrapper i,
+#jtl-nav-wrapper.xt-header-transparent:not(.xt-scrolled) .shop-nav > .nav-item > a {
+  color: #ffffff !important;
+}
+
+/* Top bar links white in transparent state */
+#jtl-nav-wrapper.xt-header-transparent:not(.xt-scrolled) .topbar-wrapper a,
+#jtl-nav-wrapper.xt-header-transparent:not(.xt-scrolled) .topbar-wrapper span,
+#jtl-nav-wrapper.xt-header-transparent:not(.xt-scrolled) #header-top-bar a {
+  color: #ffffff !important;
+}
+
+/* Search bar styling in transparent state */
+#jtl-nav-wrapper.xt-header-transparent:not(.xt-scrolled) .main-search-wrapper input {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+#jtl-nav-wrapper.xt-header-transparent:not(.xt-scrolled) .main-search-wrapper input::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+#jtl-nav-wrapper.xt-header-transparent:not(.xt-scrolled) .main-search-wrapper .btn {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+/* --- Nav Links Restyling --- */
+@media (min-width: 992px) {
+  #jtl-nav-wrapper .nav-scrollbar-inner > .nav-item > .nav-link {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    font-size: 0.8125rem;
+    font-family: 'Inter', sans-serif;
+    transition: color 0.2s ease;
+    padding: 0.75rem 1rem;
+  }
+
+  #jtl-nav-wrapper .nav-scrollbar-inner > .nav-item > .nav-link:hover,
+  #jtl-nav-wrapper .nav-scrollbar-inner > .nav-item.active > .nav-link {
+    color: var(--xt-accent) !important;
+  }
+}
+
+/* ============================================
+   Mega-Menu Dropdown Restyling
+   ============================================ */
+
+/* Dropdown container */
+@media (min-width: 992px) {
+  #jtl-nav-wrapper .dropdown-menu.xt-mega-dropdown {
+    border: none;
+    border-radius: 0 0 0.75rem 0.75rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    padding: 1.5rem 0;
+    margin-top: 0;
+  }
+
+  /* Inner layout: categories + featured card side by side */
+  .xt-mega-inner {
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+  }
+
+  .xt-mega-categories {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Subcategory headlines */
+  .xt-mega-dropdown .submenu-headline-toplevel {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+    color: #0f172a;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Sub-links */
+  .xt-mega-dropdown .nav-link:not(.submenu-headline-toplevel):not(.dropdown-toggle) {
+    color: #64748b;
+    font-size: 0.875rem;
+    font-family: 'Inter', sans-serif;
+    transition: color 0.2s ease, transform 0.2s ease;
+    padding: 0.25rem 0.75rem;
+  }
+
+  .xt-mega-dropdown .nav-link:not(.submenu-headline-toplevel):not(.dropdown-toggle):hover {
+    color: var(--xt-accent) !important;
+    transform: translateX(4px);
+  }
+}
+
+/* ============================================
+   Mega-Menu Featured Image Card
+   ============================================ */
+.xt-mega-featured {
+  flex: 0 0 240px;
+  min-height: 280px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.xt-mega-featured-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.xt-mega-featured-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  transition: transform 0.5s ease;
+}
+
+.xt-mega-featured-link:hover .xt-mega-featured-img {
+  transform: scale(1.08);
+}
+
+.xt-mega-featured-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.1) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  color: #ffffff;
+}
+
+.xt-mega-featured-badge {
+  display: inline-block;
+  background: var(--xt-accent);
+  color: #ffffff;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+  width: fit-content;
+  font-family: 'Inter', sans-serif;
+}
+
+.xt-mega-featured-title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 0.25rem;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.xt-mega-featured-subtitle {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 0.75rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.xt-mega-featured-cta {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--xt-accent);
+  transition: color 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.xt-mega-featured-link:hover .xt-mega-featured-cta {
+  color: #ffffff;
+}
