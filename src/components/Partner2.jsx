@@ -1,16 +1,16 @@
 import React from 'react';
 
 const brands = [
-  { name: "INDUTEC", logo: "https://assets.watara.services/xt/assets/indutec.svg" },
-  { name: "PETERHOFF", logo: "https://assets.watara.services/xt/assets/peterhoff.svg" },
-  { name: "GÜRKAN", logo: "https://assets.watara.services/xt/assets/guerkan.svg" },
-  { name: "PAP", logo: "https://assets.watara.services/xt/assets/pap.svg" },
-  { name: "THERME EUSKIRCHEN", logo: "https://assets.watara.services/xt/assets/euskirchen.svg" },
-  { name: "QUIP", logo: "https://assets.watara.services/xt/assets/quip.svg" },
+  { name: "INDUTEC", logo: "https://xt-trade.com/mediafiles/landing-assets/images/customer/indutec.svg" },
+  { name: "PETERHOFF", logo: "https://xt-trade.com/mediafiles/landing-assets/images/customer/peterhoff.svg" },
+  { name: "GÜRKAN", logo: "https://xt-trade.com/mediafiles/landing-assets/images/customer/guerkan.svg" },
+  { name: "PAP", logo: "https://xt-trade.com/mediafiles/landing-assets/images/customer/pap.svg" },
+  { name: "THERME EUSKIRCHEN", logo: "https://xt-trade.com/mediafiles/landing-assets/images/customer/euskirchen.svg" },
+  { name: "QUIP", logo: "https://xt-trade.com/mediafiles/landing-assets/images/customer/quip.svg" },
 
 
   
-  { name: "STADT BERGHEIM", logo: "https://assets.watara.services/xt/assets/bergheim.svg" }
+  // { name: "STADT BERGHEIM", logo: "https://xt-trade.com/mediafiles/landing-assets/images/customer/bergheim.svg" }
 ];
 
 const BrandList = () => (

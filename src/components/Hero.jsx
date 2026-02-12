@@ -86,7 +86,7 @@ const Hero = () => {
 
               {/* Image Background */}
               <img
-                src="https://assets.watara.services/xt/assets/multinorm_cool.jpg"
+                src="https://xt-trade.com/mediafiles/landing-assets/images/multinorm_cool.jpg"
                 alt="Multinorm Cool"
                 className="absolute inset-0 w-full h-full object-cover"
               />
@@ -118,7 +118,7 @@ const Hero = () => {
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover"
               >
-                <source src="https://assets.watara.services/xt/assets/DEF%20Scarpa%20U-Power.mp4" type="video/mp4" />
+                <source src="https://xt-trade.com/mediafiles/landing-assets/videos/Scarpa U-Power.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 

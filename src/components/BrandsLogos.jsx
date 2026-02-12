@@ -1,19 +1,19 @@
 import React from 'react';
 
 const brands = [
-  { name: "U-POWER", logo: "https://assets.watara.services/xt/assets/u-power.svg" },
-  { name: "COVERSTAR", logo: "https://assets.watara.services/xt/assets/cstar.svg" },
-  { name: "PUMA SAFETY", logo: "https://assets.watara.services/xt/assets/puma-safety.svg" },
-  { name: "COVERFLASH", logo: "https://assets.watara.services/xt/assets/cflash.svg" },
-  { name: "NITRAS", logo: "https://assets.watara.services/xt/assets/nitras-safety.svg" },
-  { name: "PREVENT TRENDLINE", logo: "https://assets.watara.services/xt/assets/prevent-trendline.svg" },
-  { name: "LEIBWÄCHTER", logo: "https://assets.watara.services/xt/assets/leibweachter.svg" },
-  { name: "ALBATROSS", logo: "https://assets.watara.services/xt/assets/albatross.svg" },
-  { name: "COVERCHEM200", logo: "https://assets.watara.services/xt/assets/cchem200.svg" },
-  { name: "BP", logo: "https://assets.watara.services/xt/assets/bp.svg" },
-  { name: "PROMODORO", logo: "https://assets.watara.services/xt/assets/promodoro.svg" },
-  { name: "COVERBASE", logo: "https://assets.watara.services/xt/assets/cbase.svg" },
-  { name: "JAMES NICHOLSON", logo: "https://assets.watara.services/xt/assets/jamesnicholson.svg" }
+  { name: "U-POWER", logo: "https://xt-trade.com/mediafiles/landing-assets/images/brands/u-power.svg" },
+  { name: "COVERSTAR", logo: "https://xt-trade.com/mediafiles/landing-assets/images/brands/cstar.svg" },
+  { name: "PUMA SAFETY", logo: "https://xt-trade.com/mediafiles/landing-assets/images/brands/puma-safety.svg" },
+  { name: "COVERFLASH", logo: "https://xt-trade.com/mediafiles/landing-assets/images/brands/cflash.svg" },
+  { name: "NITRAS", logo: "https://xt-trade.com/mediafiles/landing-assets/images/brands/nitras-safety.svg" },
+  { name: "PREVENT TRENDLINE", logo: "https://xt-trade.com/mediafiles/landing-assets/images/brands/prevent-trendline.svg" },
+  { name: "LEIBWÄCHTER", logo: "https://xt-trade.com/mediafiles/landing-assets/images/brands/leibweachter.svg" },
+  { name: "ALBATROSS", logo: "https://xt-trade.com/mediafiles/landing-assets/images/brands/albatross.svg" },
+  { name: "COVERCHEM200", logo: "https://xt-trade.com/mediafiles/landing-assets/images/brands/cchem200.svg" },
+  { name: "BP", logo: "https://xt-trade.com/mediafiles/landing-assets/images/brands/bp.svg" },
+  { name: "PROMODORO", logo: "https://xt-trade.com/mediafiles/landing-assets/images/brands/promodoro.svg" },
+  { name: "COVERBASE", logo: "https://xt-trade.com/mediafiles/landing-assets/images/brands/cbase.svg" },
+  { name: "JAMES NICHOLSON", logo: "https://xt-trade.com/mediafiles/landing-assets/images/brands/jamesnicholson.svg" }
 ];
 
 const BrandList = () => (

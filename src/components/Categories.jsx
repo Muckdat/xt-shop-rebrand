@@ -8,27 +8,27 @@ const categories = [
     title: "Einwegprodukte",
     subtitle: "Maximaler Einwegschutz",
     size: "large",
-    image: "https://assets.watara.services/xt/assets/coverchem200.jpg",
+    image: "https://xt-trade.com/mediafiles/landing-assets/images/coverchem200.jpg",
     link: "https://www.xt-trade.com/Arbeitsschutz-Einweg-Bekleidung",
     products: [
       {
         id: 1,
         name: "Overall Type 5/6 Weiß",
-        image: "https://assets.watara.services/xt/assets/cp500.jpg",
+        image: "https://xt-trade.com/mediafiles/landing-assets/images/cp500.jpg",
         price: "Mehr erfahren",
         link: "https://www.xt-trade.com/Overalls"
       },
       {
         id: 2,
         name: "Nitrilhandschuhe Blau",
-        image: "https://assets.watara.services/xt/assets/nitrilhandschuhe.jpg",
+        image: "https://xt-trade.com/mediafiles/landing-assets/images/nitrilhandschuhe.jpg",
         price: "Mehr erfahren",
         link: "https://www.xt-trade.com/Handschuhe_2"
       },
       {
         id: 3,
         name: "Chemikalienschutz XL",
-        image: "https://assets.watara.services/xt/assets/schutzanzug.jpg",
+        image: "https://xt-trade.com/mediafiles/landing-assets/images/schutzanzug.jpg",
         price: "Mehr erfahren",
         link: "https://www.xt-trade.com/Overalls"
       }
@@ -45,21 +45,21 @@ const categories = [
       {
         id: 1,
         name: "Arbeitshose Stretch",
-        image: "https://assets.watara.services/xt/assets/hose-stretch.jpg",
+        image: "https://xt-trade.com/mediafiles/landing-assets/images/hose-stretch.jpg",
         price: "Mehr erfahren ",
         link: "https://www.xt-trade.com/Bundhosen"
       },
       {
         id: 2,
         name: "Moderne Bundjacke",
-        image: "https://assets.watara.services/xt/assets/jacke-stretch.jpg",
+        image: "https://xt-trade.com/mediafiles/landing-assets/images/jacke-stretch.jpg",
         price: "Mehr erfahren",
         link: "https://www.xt-trade.com/Bundjacken"
       },
       {
         id: 3,
         name: "Warnschutz Weste",
-        image: "https://assets.watara.services/xt/assets/warnschutzweste.jpg",
+        image: "https://xt-trade.com/mediafiles/landing-assets/images/warnschutzweste.jpg",
         price: "Mehr erfahren",
         link: "https://www.xt-trade.com/warnschutz-weste-neongelbhtml"
       }
@@ -83,14 +83,14 @@ const categories = [
       {
         id: 2,
         name: "Schutzhelm Modern",
-        image: "https://assets.watara.services/xt/assets/schutzhelm.jpg",
+        image: "https://xt-trade.com/mediafiles/landing-assets/images/schutzhelm.jpg",
         price: "Mehr erfahren",
         link: "https://www.xt-trade.com/PE-Schutzhelm-6-Punkt-Textilbaenderung-EN397"
       },
       {
         id: 3,
         name: "Schnittschutz Handschuhe",
-        image: "https://assets.watara.services/xt/assets/handschuhe.jpg",
+        image: "https://xt-trade.com/mediafiles/landing-assets/images/handschuhe.jpg",
         price: "Mehr erfahren",
         link: "https://www.xt-trade.com/Schnittschutzhandschuh-Stufe-5PU-Beschichtung-grau-eco"
       }

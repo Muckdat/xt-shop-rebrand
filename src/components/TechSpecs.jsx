@@ -118,7 +118,7 @@ const TechSpecs = () => {
     <section ref={ref} className="relative py-32 overflow-hidden bg-gray-50">
 
       <div className="absolute inset-0 z-0 h-[120%] -top-[10%] opacity-5 pointer-events-none">
-        <motion.div style={{ y: yBg }} className="w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></motion.div>
+        <motion.div style={{ y: yBg }} className="w-full h-full bg-[url('https://xt-trade.com/mediafiles/landing-assets/images/cubes.png')]"></motion.div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">

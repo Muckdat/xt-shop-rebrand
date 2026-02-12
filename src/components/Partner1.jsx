@@ -1,14 +1,14 @@
 import React from 'react';
 
 const brands = [
-  { name: "U-POWER", logo: "https://assets.watara.services/xt/assets/u-power.svg" },
-  { name: "ASATEX", logo: "https://assets.watara.services/xt/assets/asatex.svg" },
-  { name: "ISM EUROPE", logo: "https://assets.watara.services/xt/assets/ism.svg" },
-  { name: "AS Arbeitsschutz", logo: "https://assets.watara.services/xt/assets/nitras-safety.svg" },
-  { name: "TRIUSO", logo: "https://assets.watara.services/xt/assets/triuso.svg" },
-  { name: "BP", logo: "https://assets.watara.services/xt/assets/bp.svg" },
-  { name: "PROMODORO", logo: "https://assets.watara.services/xt/assets/promodoro.svg" },
-  { name: "COTTON CLASSICS", logo: "https://assets.watara.services/xt/assets/cc.svg" }
+  { name: "U-POWER", logo: "https://xt-trade.com/mediafiles/landing-assets/images/supplier/u-power.svg" },
+  { name: "ASATEX", logo: "https://xt-trade.com/mediafiles/landing-assets/images/supplier/asatex.svg" },
+  { name: "ISM EUROPE", logo: "https://xt-trade.com/mediafiles/landing-assets/images/supplier/ism.svg" },
+  { name: "AS Arbeitsschutz", logo: "https://xt-trade.com/mediafiles/landing-assets/images/supplier/nitras-safety.svg" },
+  { name: "TRIUSO", logo: "https://xt-trade.com/mediafiles/landing-assets/images/supplier/triuso.svg" },
+  { name: "BP", logo: "https://xt-trade.com/mediafiles/landing-assets/images/supplier/bp.svg" },
+  { name: "PROMODORO", logo: "https://xt-trade.com/mediafiles/landing-assets/images/supplier/promodoro.svg" },
+  { name: "COTTON CLASSICS", logo: "https://xt-trade.com/mediafiles/landing-assets/images/supplier/cc.svg" }
 ];
 
 const BrandList = () => (
