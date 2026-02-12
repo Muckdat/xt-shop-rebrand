@@ -16,7 +16,7 @@ const options = [
   {
     icon: Phone,
     title: "Telefonisch / Online",
-    description: "Schnell und unkompliziert – wir beraten Sie gerne per Telefon oder Videocall."
+    description: "Schnell und unkompliziert – wir beraten Sie gerne per Telefon."
   }
 ];
 
