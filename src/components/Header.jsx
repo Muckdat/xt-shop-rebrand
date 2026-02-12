@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShoppingCart, Search, Menu, User, ChevronDown, ArrowRight } from 'lucide-react';
+import { ShoppingCart, Search, Menu, X, User, ChevronDown, ArrowRight } from 'lucide-react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 
 const navData = {
@@ -71,6 +71,7 @@ const navData = {
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
   
   // Background transformation: Transparent -> White
@@ -147,9 +148,41 @@ const Header = () => {
             <ShoppingCart size={20} />
             <span className="absolute -top-2 -right-2 w-4 h-4 bg-accent text-white text-[10px] font-bold flex items-center justify-center rounded-full shadow-sm">2</span>
           </button>
-          <button className="md:hidden hover:text-accent transition-colors"><Menu size={24} /></button>
+          <button className="md:hidden hover:text-accent transition-colors" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden bg-white border-t border-gray-100 overflow-hidden"
+          >
+            <nav className="container mx-auto px-6 py-6 space-y-2">
+              {['Neuheiten', 'Sicherheitsschuhe', 'Berufsbekleidung', 'PSA', 'Sale'].map((item) => (
+                <div key={item}>
+                  <a
+                    href="#"
+                    className="block py-3 text-sm font-bold text-slate-900 uppercase tracking-wide hover:text-accent transition-colors border-b border-gray-100"
+                  >
+                    {item}
+                  </a>
+                </div>
+              ))}
+              <div className="pt-4 flex items-center gap-6 text-slate-900">
+                <a href="#" className="hover:text-accent transition-colors"><User size={20} /></a>
+                <a href="#" className="hover:text-accent transition-colors"><Search size={20} /></a>
+              </div>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Mega Menu Overlay */}
       <AnimatePresence>

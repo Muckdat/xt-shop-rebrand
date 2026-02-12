@@ -105,7 +105,7 @@ const ProductPopup = ({ products, categoryTitle, categoryLink }) => {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="absolute inset-0 bg-slate-900/85 backdrop-blur-sm rounded-xl z-50 hidden md:flex flex-col items-center justify-center p-6"
+      className="absolute inset-0 bg-slate-900/85 backdrop-blur-sm rounded-xl z-50 flex flex-col items-center justify-center p-4 md:p-6"
     >
       {/* Header */}
       <div className="mb-6 text-center">
@@ -114,7 +114,7 @@ const ProductPopup = ({ products, categoryTitle, categoryLink }) => {
       </div>
 
       {/* Product Grid - Horizontal */}
-      <div className="grid grid-cols-3 gap-4 mb-6 w-full max-w-2xl">
+      <div className="grid grid-cols-3 gap-2 md:gap-4 mb-4 md:mb-6 w-full max-w-2xl">
         {products.slice(0, 3).map((product) => (
           <a
             key={product.id}
@@ -159,6 +159,7 @@ const CategoryCard = ({ category, index, isHovered, onHoverChange }) => {
       transition={{ duration: 0.6, delay: index * 0.2 }}
       onMouseEnter={() => onHoverChange(category.id)}
       onMouseLeave={() => onHoverChange(null)}
+      onClick={() => onHoverChange(isHovered === category.id ? null : category.id)}
       className={`relative group overflow-hidden rounded-xl shadow-lg cursor-pointer ${
         category.size === 'large' ? 'md:col-span-2 md:row-span-2 aspect-[4/3] md:aspect-auto' : 'col-span-1'
       }`}

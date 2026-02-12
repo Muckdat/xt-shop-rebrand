@@ -134,7 +134,7 @@ const TechSpecs = () => {
               <span className="text-accent font-bold tracking-widest uppercase">Geprüfte Qualität</span>
             </div>
 
-            <h2 className="text-5xl md:text-7xl font-extrabold text-slate-900 mb-8 leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 mb-8 leading-tight">
               HÖCHSTE STANDARDS <br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-600">ERFÜLLT</span>
             </h2>

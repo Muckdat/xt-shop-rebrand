@@ -149,7 +149,7 @@ const Story = () => {
                whileInView={{ opacity: 1 }}
                viewport={{ once: true }}
                transition={{ delay: 0.8 }}
-               className="mt-8 px-8 py-4 bg-white text-slate-900 font-bold uppercase tracking-widest hover:bg-accent hover:text-white transition-all duration-300 rounded-sm inline-block"
+               className="mt-8 px-8 py-4 bg-white text-slate-900 font-bold uppercase tracking-widest hover:bg-accent hover:text-white transition-all duration-300 rounded-full inline-block"
              >
                Mehr über uns
              </motion.a>

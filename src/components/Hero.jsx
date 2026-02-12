@@ -25,13 +25,13 @@ const SlideContent = ({ title, subtitle, buttonText, buttonLink, isActive }) => 
               {subtitle}
             </motion.h2>
 
-            {/* Title and Button - in one line (no wrap) */}
-            <div className="flex items-center justify-center gap-6 md:gap-10">
+            {/* Title and Button */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10">
               <motion.h1
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                className="text-3xl md:text-5xl lg:text-7xl font-extrabold text-white tracking-tight whitespace-nowrap"
+                className="text-3xl md:text-5xl lg:text-7xl font-extrabold text-white tracking-tight text-center md:whitespace-nowrap"
               >
                 {title}
               </motion.h1>

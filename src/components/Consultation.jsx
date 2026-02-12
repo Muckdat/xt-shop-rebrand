@@ -71,7 +71,7 @@ const Consultation = () => {
             >
               <a
                 href="tel:+4922734068100"
-                className="group relative px-8 py-4 bg-accent text-white font-bold rounded-full overflow-hidden shadow-2xl hover:shadow-accent/50 transition-all duration-300 inline-flex items-center gap-3"
+                className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-accent text-white font-bold rounded-full overflow-hidden shadow-2xl hover:shadow-accent/50 transition-all duration-300 inline-flex items-center gap-3 w-full sm:w-auto justify-center"
               >
                 <Phone size={20} />
                 +49 2273 4068100
@@ -80,7 +80,7 @@ const Consultation = () => {
 
               <a
                 href="https://www.xt-trade.com/Beratung-Kontakt"
-                className="inline-flex items-center gap-3 px-8 py-4 border border-white/20 text-white font-bold rounded-full hover:border-accent hover:text-accent transition-all duration-300"
+                className="inline-flex items-center gap-3 px-6 py-3 sm:px-8 sm:py-4 border border-white/20 text-white font-bold rounded-full hover:border-accent hover:text-accent transition-all duration-300 w-full sm:w-auto justify-center"
               >
                 <Mail size={20} />
                 Nachricht schreiben

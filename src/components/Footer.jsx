@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         
         {/* Links Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-10 mb-20">
           <div>
             <h4 className="font-bold text-lg mb-6 uppercase tracking-wider text-slate-900">Shop</h4>
             <ul className="space-y-4">
