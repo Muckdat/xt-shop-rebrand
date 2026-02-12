@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const brands = [
   { name: "U-POWER", logo: "https://assets.watara.services/xt/assets/u-power.svg" },
@@ -12,6 +11,23 @@ const brands = [
   { name: "COTTON CLASSICS", logo: "https://assets.watara.services/xt/assets/cc.svg" }
 ];
 
+const BrandList = () => (
+  <div className="flex items-center shrink-0">
+    {brands.map((brand, idx) => (
+      <div
+        key={idx}
+        className="group flex-shrink-0 mr-12 px-6 py-4 bg-white rounded-lg border border-gray-200 hover:border-accent hover:shadow-md transition-all duration-300 cursor-pointer"
+      >
+        <img
+          src={brand.logo}
+          alt={brand.name}
+          className="h-12 w-auto object-contain grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-300"
+        />
+      </div>
+    ))}
+  </div>
+);
+
 const BrandsLogos = () => {
   return (
     <div className="py-16 bg-white border-b border-gray-100 overflow-hidden">
@@ -22,30 +38,14 @@ const BrandsLogos = () => {
       </div>
 
       {/* Infinite Scroll Wrapper */}
-      <div className="flex relative">
-        <motion.div
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="flex flex-nowrap gap-12 items-center"
+      <div className="relative">
+        <div
+          className="flex w-max"
+          style={{ animation: 'infinite-scroll 30s linear infinite' }}
         >
-          {/* We double the list to create a seamless loop */}
-          {[...brands, ...brands].map((brand, idx) => (
-            <div
-              key={idx}
-              className="group flex-shrink-0 px-6 py-4 bg-white rounded-lg border border-gray-200 hover:border-accent hover:shadow-md transition-all duration-300 cursor-pointer"
-            >
-              <img
-                src={brand.logo}
-                alt={brand.name}
-                className="h-12 w-auto object-contain grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-300"
-              />
-            </div>
-          ))}
-        </motion.div>
+          <BrandList />
+          <BrandList />
+        </div>
 
         {/* Gradient Overlays for smooth fade out at edges */}
         <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>

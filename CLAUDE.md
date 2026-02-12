@@ -45,13 +45,16 @@ The app uses a single-page layout with components rendered sequentially in `App.
 
 1. **Header** - Sticky navigation with animated mega-menu dropdowns (uses image logo from assets.watara.services)
 2. **Hero** - Full-screen Swiper carousel with image/video slides
-3. **Brands** - Text-based brand showcase with infinite scroll
-4. **BrandsLogos** - Logo-based brand showcase with grayscale hover effect
+3. **Partner1** - Customer logos infinite scroll carousel
+4. **BrandsLogos** - Brand logo showcase with grayscale hover effect and infinite scroll
 5. **Categories** - Grid layout with hover-activated product popups (see Categories Pattern below)
 6. **Story** - Brand story section with XT-TRADE "Über uns" content, links to www.xt-trade.com/Ueber-uns
 7. **TechSpecs** - Feature flip cards showcasing product standards, links to www.xt-trade.com/Schutzkleidung
 8. **Testimonials** - B2B client references with company names, stats, and project details
-9. **Footer** - Site footer
+9. **Partner2** - Additional customer company logos infinite scroll carousel
+10. **Footer** - Site footer
+
+**Note**: `FeaturedProducts.jsx` exists as a Swiper product carousel component but is not currently rendered in `App.jsx`.
 
 ### Key Architecture Patterns
 
@@ -106,12 +109,12 @@ All external links use `target="_blank"` and `rel="noopener noreferrer"` for sec
 
 **Testimonials (B2B Style)**: Testimonials are designed for B2B with company names prominent, project statistics (Users icon, Calendar icon, Building2 icon), no star ratings, professional tone with concrete results/numbers. Each testimonial includes `company`, `role`, `stats` array, and longer descriptive text.
 
-**Swiper Configuration**: Hero uses `effect: 'fade'` with custom pagination bullets. FeaturedProducts uses standard slides with navigation arrows. Both have custom styling in `<style>` tags.
+**Swiper Configuration**: Hero uses `effect: 'fade'` with custom pagination bullets and custom styling in a `<style>` tag. FeaturedProducts (not currently rendered) uses standard slides with navigation arrows.
 
 **Framer Motion**: Animations are declarative using `initial`, `animate`, `whileInView`, and `transition` props. Use `AnimatePresence` for exit animations (e.g., mega-menu, category popups).
 
 ## Git Workflow
 
 - Main branch: `main`
-- Current branch: `2nd`
 - Standard commit workflow with git hooks (if configured)
+- No ESLint or Prettier configured; no linting or formatting scripts available

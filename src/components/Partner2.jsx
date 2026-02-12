@@ -1,18 +1,34 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const brands = [
   { name: "INDUTEC", logo: "https://assets.watara.services/xt/assets/indutec.svg" },
   { name: "PETERHOFF", logo: "https://assets.watara.services/xt/assets/peterhoff.svg" },
-  { name: "MAAßEN", logo: "https://assets.watara.services/xt/assets/maassen.svg" },
-  { name: "IWAGO", logo: "https://assets.watara.services/xt/assets/iwago.svg" },
+  { name: "GÜRKAN", logo: "https://assets.watara.services/xt/assets/guerkan.svg" },
   { name: "PAP", logo: "https://assets.watara.services/xt/assets/pap.svg" },
-  { name: "LOBBE", logo: "https://assets.watara.services/xt/assets/lobbe.svg" },
-  { name: "MATRIX", logo: "https://assets.watara.services/xt/assets/matrix.svg" },
-  { name: "STADT BERGHEIM", logo: "https://assets.watara.services/xt/assets/bergheim.svg" },
-  { name: "AZZA BAU", logo: "https://assets.watara.services/xt/assets/azza.svg" },
-  { name: "ATC", logo: "https://assets.watara.services/xt/assets/atc.svg" }
+  { name: "THERME EUSKIRCHEN", logo: "https://assets.watara.services/xt/assets/euskirchen.svg" },
+  { name: "QUIP", logo: "https://assets.watara.services/xt/assets/quip.svg" },
+
+
+  
+  { name: "STADT BERGHEIM", logo: "https://assets.watara.services/xt/assets/bergheim.svg" }
 ];
+
+const BrandList = () => (
+  <div className="flex items-center shrink-0">
+    {brands.map((brand, idx) => (
+      <div
+        key={idx}
+        className="group flex-shrink-0 mr-12 px-6 py-4 bg-white rounded-lg border border-gray-200 hover:border-accent hover:shadow-md transition-all duration-300 cursor-pointer"
+      >
+        <img
+          src={brand.logo}
+          alt={brand.name}
+          className="h-12 w-auto object-contain grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-300"
+        />
+      </div>
+    ))}
+  </div>
+);
 
 const BrandsLogos = () => {
   return (
@@ -29,30 +45,14 @@ const BrandsLogos = () => {
       </div>
 
       {/* Infinite Scroll Wrapper */}
-      <div className="flex relative">
-        <motion.div
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="flex flex-nowrap gap-12 items-center"
+      <div className="relative">
+        <div
+          className="flex w-max"
+          style={{ animation: 'infinite-scroll 30s linear infinite' }}
         >
-          {/* We double the list to create a seamless loop */}
-          {[...brands, ...brands].map((brand, idx) => (
-            <div
-              key={idx}
-              className="group flex-shrink-0 px-6 py-4 bg-white rounded-lg border border-gray-200 hover:border-accent hover:shadow-md transition-all duration-300 cursor-pointer"
-            >
-              <img
-                src={brand.logo}
-                alt={brand.name}
-                className="h-12 w-auto object-contain grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-300"
-              />
-            </div>
-          ))}
-        </motion.div>
+          <BrandList />
+          <BrandList />
+        </div>
 
         {/* Gradient Overlays for smooth fade out at edges */}
         <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
