@@ -18,6 +18,7 @@
     <Minify>
         <CSS Name="my-nova.css">
             <File Path="themes/my-nova/my-nova.css"/>
+            <File Path="themes/my-nova/xt-tailwind.css"/>
             <File Path="themes/my-nova/custom.css"/>
         </CSS>
     </Minify>

@@ -1,4 +1,737 @@
-/*
- * Platz für eigene Änderungen direkt als CSS
- * Die hier gemachten Änderungen überschreiben ggfs. andere Styles, da diese Datei als letzte geladen wird.
- */
+/* ============================================
+   XT-TRADE Landing Page – Custom Styles
+   ============================================ */
+
+/* --- CSS Custom Properties --- */
+:root {
+  --xt-accent: #EF9112;
+  --xt-accent-dark: #d67e00;
+  --xt-dark: #0f172a;
+  --xt-white: #ffffff;
+  --xt-gray-50: #f8fafc;
+}
+
+/* --- Full-Bleed Override for NOVA Content-Wrapper --- */
+.xt-landing {
+  font-family: 'Inter', sans-serif;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Prevent NOVA container from constraining landing page sections */
+.xt-landing > section,
+.xt-landing > div {
+  max-width: none !important;
+  width: 100% !important;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+
+/* NOVA parent containers: kill all constraints above .xt-landing */
+.container .xt-landing,
+.container-fluid .xt-landing,
+[class*="container"] .xt-landing {
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+}
+
+/* --- Bootstrap/NOVA Reset within Landing Page --- */
+/* These counters Bootstrap defaults that override Tailwind utilities */
+
+/* 1) Font: Inter everywhere */
+.xt-landing,
+.xt-landing *,
+.xt-landing *::before,
+.xt-landing *::after {
+  font-family: 'Inter', sans-serif;
+}
+
+/* 2) Border-Reset: siehe xt-tailwind.css (@layer base) */
+
+/* 3) Links: kein Unterstreichen, Farbe erben */
+.xt-landing a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.xt-landing a:hover {
+  text-decoration: none;
+}
+
+/* 4) Tailwind hover-Utilities auf Links zulassen */
+.xt-landing a.hover\:tw-text-black:hover {
+  color: #000000 !important;
+}
+
+.xt-landing a.hover\:tw-text-accent:hover {
+  color: #EF9112 !important;
+}
+
+.xt-landing a.hover\:tw-text-white:hover {
+  color: #ffffff !important;
+}
+
+.xt-landing a.hover\:tw-bg-accent:hover {
+  background-color: #EF9112 !important;
+}
+
+.xt-landing a.hover\:tw-bg-white:hover {
+  background-color: #ffffff !important;
+}
+
+.xt-landing a.hover\:tw-border-accent:hover {
+  border-color: #EF9112 !important;
+}
+
+/* 5) Heading/Paragraph Reset */
+/* Note: margin-bottom NOT reset here – Tailwind tw-mb-* classes handle it.
+   Our .xt-landing h2 (0,1,1) would beat .tw-mb-8 (0,1,0) and zero out spacing. */
+.xt-landing h1, .xt-landing h2, .xt-landing h3,
+.xt-landing h4, .xt-landing h5, .xt-landing h6 {
+  margin-top: 0;
+  color: inherit;
+  font-family: 'Inter', sans-serif;
+}
+
+.xt-landing p {
+  margin-top: 0;
+}
+
+/* 6) Images: max-width but NO height override (let tw-h-12 etc. work) */
+.xt-landing img {
+  max-width: 100%;
+  border: 0;
+}
+
+.xt-landing section {
+  color: inherit;
+}
+
+/* 7) Border-Utilities: Spezifitaet erhoehen gegen @layer base Reset */
+.xt-landing .tw-border {
+  border-width: 1px !important;
+}
+
+.xt-landing .tw-border-2 {
+  border-width: 2px !important;
+}
+
+.xt-landing .tw-border-4 {
+  border-width: 4px !important;
+}
+
+.xt-landing .tw-border-b {
+  border-bottom-width: 1px !important;
+}
+
+.xt-landing .tw-border-b-2 {
+  border-bottom-width: 2px !important;
+}
+
+.xt-landing .tw-border-t {
+  border-top-width: 1px !important;
+}
+
+.xt-landing .tw-border-l-4 {
+  border-left-width: 4px !important;
+}
+
+/* Force white text in dark sections (overrides Bootstrap body color) */
+.xt-landing .tw-text-white {
+  color: #ffffff !important;
+}
+
+.xt-landing .tw-text-slate-900 {
+  color: #0f172a !important;
+}
+
+.xt-landing .tw-text-accent {
+  color: #EF9112 !important;
+}
+
+.xt-landing .tw-text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+.xt-landing .tw-text-slate-500 {
+  color: #64748b !important;
+}
+
+.xt-landing .tw-text-slate-600 {
+  color: #475569 !important;
+}
+
+.xt-landing .tw-text-gray-400 {
+  color: #9ca3af !important;
+}
+
+.xt-landing .tw-text-gray-300 {
+  color: #d1d5db !important;
+}
+
+.xt-landing .tw-bg-slate-900 {
+  color: #ffffff;
+}
+
+.xt-landing .tw-text-white\/90 {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.xt-landing .tw-text-white\/20 {
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* 8) Background color overrides (Bootstrap/NOVA may set bg on parents) */
+.xt-landing .tw-bg-gray-50 {
+  background-color: #f9fafb !important;
+}
+
+.xt-landing .tw-bg-white {
+  background-color: #ffffff !important;
+}
+
+.xt-landing .tw-bg-slate-900 {
+  background-color: #0f172a !important;
+  color: #ffffff;
+}
+
+.xt-landing .tw-bg-accent {
+  background-color: #EF9112 !important;
+}
+
+.xt-landing .tw-bg-accent\/5 {
+  background-color: rgba(239, 145, 18, 0.05) !important;
+}
+
+.xt-landing .tw-bg-accent\/10 {
+  background-color: rgba(239, 145, 18, 0.1) !important;
+}
+
+.xt-landing .tw-bg-white\/5 {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.xt-landing .tw-bg-white\/10 {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 9) Shadow overrides */
+.xt-landing .tw-shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.xt-landing .tw-shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.xt-landing .tw-shadow-inner {
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 10) Border color overrides */
+.xt-landing .tw-border-accent\/30 {
+  border-color: rgba(239, 145, 18, 0.3) !important;
+}
+
+.xt-landing .tw-border-accent {
+  border-color: #EF9112 !important;
+}
+
+.xt-landing .tw-border-gray-200 {
+  border-color: #e5e7eb !important;
+}
+
+.xt-landing .tw-border-white\/10 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.xt-landing .tw-border-white\/20 {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* --- Gradient Text Utility --- */
+.xt-gradient-text {
+  background: linear-gradient(to right, var(--xt-accent), #ea580c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* --- Diagonal Stripe Background Pattern --- */
+.xt-stripe-pattern {
+  background-image: linear-gradient(
+    45deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 75%,
+    transparent 100%
+  );
+  background-size: 20px 20px;
+}
+
+/* ============================================
+   Infinite Scroll Logo Carousels
+   ============================================ */
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.xt-scroll-track {
+  animation: infinite-scroll 50s linear infinite;
+}
+
+.xt-scroll-track:hover {
+  animation-play-state: paused;
+}
+
+/* ============================================
+   Hero Carousel
+   ============================================ */
+.xt-hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+.xt-hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  z-index: 1;
+}
+
+.xt-hero-slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.xt-hero-slide img,
+.xt-hero-slide video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.xt-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+}
+
+.xt-hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 1rem 5rem;
+}
+
+@media (min-width: 768px) {
+  .xt-hero-content {
+    padding-bottom: 6rem;
+  }
+}
+
+/* Hero Text Animations */
+@keyframes xt-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes xt-fade-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.xt-hero-slide.active .xt-hero-subtitle {
+  animation: xt-slide-up 0.8s 0.2s ease-out both;
+}
+
+.xt-hero-slide.active .xt-hero-title {
+  animation: xt-slide-up 0.8s 0.4s ease-out both;
+}
+
+.xt-hero-slide.active .xt-hero-cta {
+  animation: xt-fade-scale 0.8s 0.6s ease-out both;
+}
+
+/* Reset animations on inactive slides */
+.xt-hero-slide:not(.active) .xt-hero-subtitle,
+.xt-hero-slide:not(.active) .xt-hero-title,
+.xt-hero-slide:not(.active) .xt-hero-cta {
+  opacity: 0;
+}
+
+/* Hero Pagination Bullets */
+.xt-hero-pagination {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.xt-hero-bullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.xt-hero-bullet.active {
+  background: var(--xt-accent);
+  width: 30px;
+}
+
+/* Hero CTA Button Sweep Effect */
+.xt-hero-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.xt-hero-btn .xt-btn-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--xt-white);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.xt-hero-btn:hover .xt-btn-bg {
+  transform: translateX(0);
+}
+
+.xt-landing .xt-hero-btn:hover {
+  color: #000 !important;
+}
+
+.xt-landing .xt-hero-btn:hover .tw-relative {
+  color: #000 !important;
+}
+
+.xt-landing .xt-hero-btn:hover svg {
+  color: #000 !important;
+  stroke: #000;
+}
+
+/* ============================================
+   Scroll Animations (Intersection Observer)
+   ============================================ */
+[data-xt-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-xt-animate="fade-left"] {
+  transform: translateX(-50px);
+}
+
+[data-xt-animate="fade-right"] {
+  transform: translateX(50px);
+}
+
+[data-xt-animate="fade-scale"] {
+  transform: scale(0.8);
+}
+
+[data-xt-animate].xt-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* ============================================
+   Category Grid – Responsive Auto-Rows
+   ============================================ */
+.xt-category-grid {
+  grid-auto-rows: 300px;
+}
+
+@media (min-width: 768px) {
+  .xt-category-grid {
+    grid-auto-rows: 400px;
+  }
+}
+
+/* ============================================
+   Category Cards & Popups
+   ============================================ */
+.xt-category-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
+
+.xt-category-card img.xt-cat-bg {
+  transition: transform 0.7s ease;
+}
+
+.xt-category-card:hover img.xt-cat-bg {
+  transform: scale(1.1);
+}
+
+.xt-category-card .xt-cat-content {
+  transition: transform 0.5s ease;
+}
+
+.xt-category-card:hover .xt-cat-content {
+  transform: translateY(-0.5rem);
+}
+
+.xt-category-card .xt-cat-arrow {
+  transition: all 0.3s ease;
+}
+
+.xt-category-card:hover .xt-cat-arrow {
+  background: var(--xt-accent);
+}
+
+.xt-category-card:hover .xt-cat-arrow svg {
+  transform: rotate(45deg);
+}
+
+/* Category Popup Overlay */
+.xt-category-popup {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 0.75rem;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.xt-category-popup.xt-popup-visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: all;
+}
+
+/* Product card inside popup */
+.xt-popup-product:hover {
+  border-color: var(--xt-accent);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.xt-popup-product:hover .xt-popup-product-name {
+  color: var(--xt-accent);
+}
+
+.xt-popup-product:hover img {
+  transform: scale(1.1);
+}
+
+/* ============================================
+   TechSpecs Flip Cards (3D)
+   ============================================ */
+.xt-flip-card {
+  perspective: 1000px;
+  height: 320px;
+  cursor: pointer;
+}
+
+.xt-flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+/* Desktop: hover triggers flip */
+@media (hover: hover) {
+  .xt-flip-card:hover .xt-flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Mobile: click adds .xt-flipped class */
+.xt-flip-card.xt-flipped .xt-flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.xt-flip-card-front,
+.xt-flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.xt-flip-card-front {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.xt-flip-card-front:hover {
+  border-color: rgba(239, 145, 18, 0.5);
+}
+
+.xt-flip-card-back {
+  background: linear-gradient(135deg, var(--xt-accent), var(--xt-accent-dark));
+  color: white;
+  transform: rotateY(180deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Flip card front icon scale on hover */
+.xt-flip-card:hover .xt-flip-icon {
+  transform: scale(1.1);
+}
+
+.xt-flip-icon {
+  transition: transform 0.3s ease;
+}
+
+/* Decorative corner dot */
+.xt-flip-card .xt-flip-dot {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.xt-flip-card:hover .xt-flip-dot {
+  opacity: 1;
+}
+
+/* ============================================
+   Story Section
+   ============================================ */
+.xt-story-feature:hover .xt-story-icon {
+  background: var(--xt-accent);
+  color: #ffffff !important;
+}
+
+.xt-story-feature:hover .xt-story-icon svg {
+  stroke: #ffffff !important;
+  color: #ffffff !important;
+}
+
+.xt-story-feature:hover .xt-story-feature-title {
+  color: var(--xt-accent);
+}
+
+/* ============================================
+   Consultation Section Option Cards
+   ============================================ */
+.xt-consult-option:hover {
+  border-color: rgba(239, 145, 18, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.xt-consult-option:hover .xt-consult-icon {
+  background: var(--xt-accent);
+  color: #ffffff !important;
+}
+
+.xt-consult-option:hover .xt-consult-icon svg {
+  stroke: #ffffff !important;
+  color: #ffffff !important;
+}
+
+/* ============================================
+   Testimonials
+   ============================================ */
+.xt-testimonial-card:hover {
+  border-color: rgba(239, 145, 18, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   TechSpecs CTA Button Sweep
+   ============================================ */
+.xt-cta-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.xt-cta-sweep .xt-sweep-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--xt-accent);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.xt-cta-sweep:hover .xt-sweep-bg {
+  transform: translateY(0);
+}
+
+/* ============================================
+   Responsive Utilities
+   ============================================ */
+@media (max-width: 767px) {
+  .xt-hero-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Line-clamp fallback */
+.xt-line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
