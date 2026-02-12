@@ -105,16 +105,15 @@ const ProductPopup = ({ products, categoryTitle, categoryLink }) => {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="absolute inset-0 bg-slate-900/85 backdrop-blur-sm rounded-xl z-50 flex flex-col items-center justify-center p-4 md:p-6"
+      className="absolute inset-0 bg-slate-900/85 backdrop-blur-sm rounded-xl z-50 flex flex-col items-center justify-center p-3 md:p-6"
     >
       {/* Header */}
-      <div className="mb-6 text-center">
-        <h4 className="text-2xl font-extrabold text-white uppercase tracking-tight mb-1">{categoryTitle}</h4>
-        <p className="text-sm text-gray-300"> </p>
+      <div className="mb-2 md:mb-6 text-center">
+        <h4 className="text-lg md:text-2xl font-extrabold text-white uppercase tracking-tight mb-1">{categoryTitle}</h4>
       </div>
 
       {/* Product Grid - Horizontal */}
-      <div className="grid grid-cols-3 gap-2 md:gap-4 mb-4 md:mb-6 w-full max-w-2xl">
+      <div className="grid grid-cols-3 gap-2 md:gap-4 mb-2 md:mb-6 w-full max-w-2xl">
         {products.slice(0, 3).map((product) => (
           <a
             key={product.id}
@@ -128,11 +127,11 @@ const ProductPopup = ({ products, categoryTitle, categoryLink }) => {
                 className="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-500"
               />
             </div>
-            <div className="p-3">
-              <h5 className="text-sm font-bold text-slate-900 mb-2 line-clamp-2 group-hover/item:text-accent transition-colors">
+            <div className="p-1.5 md:p-3">
+              <h5 className="text-[11px] md:text-sm font-bold text-slate-900 mb-1 md:mb-2 line-clamp-2 group-hover/item:text-accent transition-colors">
                 {product.name}
               </h5>
-              <p className="text-sm font-extrabold text-accent">{product.price}</p>
+              <p className="text-[11px] md:text-sm font-extrabold text-accent">{product.price}</p>
             </div>
           </a>
         ))}
@@ -141,7 +140,7 @@ const ProductPopup = ({ products, categoryTitle, categoryLink }) => {
       {/* View All Link */}
       <a
         href={categoryLink}
-        className="flex items-center justify-center gap-2 px-8 py-3 bg-white text-slate-900 font-bold text-sm rounded-lg hover:bg-accent hover:text-white transition-colors duration-300 shadow-lg"
+        className="flex items-center justify-center gap-2 px-5 py-2 md:px-8 md:py-3 bg-white text-slate-900 font-bold text-xs md:text-sm rounded-lg hover:bg-accent hover:text-white transition-colors duration-300 shadow-lg"
       >
         Alle Produkte ansehen
         <ArrowRight size={16} />
