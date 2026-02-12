@@ -41,7 +41,7 @@ const BrandsLogos = () => {
       <div className="relative">
         <div
           className="flex w-max"
-          style={{ animation: 'infinite-scroll 30s linear infinite' }}
+          style={{ animation: 'infinite-scroll 50s linear infinite' }}
         >
           <BrandList />
           <BrandList />

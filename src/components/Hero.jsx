@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
-const SlideContent = ({ title, subtitle, buttonText, isActive }) => {
+const SlideContent = ({ title, subtitle, buttonText, buttonLink, isActive }) => {
   return (
     <div className="absolute inset-0 z-20 flex flex-col items-center justify-end px-4 pb-20 md:pb-24">
       <div className="w-full max-w-7xl mx-auto">
@@ -42,11 +42,11 @@ const SlideContent = ({ title, subtitle, buttonText, isActive }) => {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="flex-shrink-0"
               >
-                <button className="group relative inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 bg-accent text-white font-bold text-sm md:text-base tracking-wide hover:bg-white hover:text-black transition-all duration-300 rounded-sm overflow-hidden whitespace-nowrap">
+                <a href={buttonLink} className="group relative inline-flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 bg-accent text-white font-bold text-sm md:text-base tracking-wide hover:bg-white hover:text-black transition-all duration-300 rounded-sm overflow-hidden whitespace-nowrap">
                   <span className="relative z-10">{buttonText}</span>
                   <ArrowRight className="w-4 h-4 md:w-5 md:h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
                   <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></div>
-                </button>
+                </a>
               </motion.div>
             </div>
           </>
@@ -97,6 +97,7 @@ const Hero = () => {
                 subtitle="Ultimativer Schutz"
                 title="FÜR EXTREME GEBAUT"
                 buttonText="Jetzt Einkaufen"
+                buttonLink="https://www.xt-trade.com/Schutzkleidung"
               />
             </div>
           )}
@@ -126,7 +127,8 @@ const Hero = () => {
                 isActive={isActive}
                 subtitle="Sicherheit der nächsten Stufe"
                 title="ARBEITSKLEIDUNG NEU GEDACHT"
-                buttonText="Kollektion entdecken"
+                buttonText="Produkte entdecken"
+                buttonLink="https://www.xt-trade.com/Sicherheitsschuhe"
               />
             </div>
           )}

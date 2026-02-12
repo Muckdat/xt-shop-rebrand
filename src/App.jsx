@@ -9,6 +9,7 @@ import Story from './components/Story';
 import TechSpecs from './components/TechSpecs';
 import Testimonials from './components/Testimonials';
 import Partner2 from './components/Partner2';
+import Consultation from './components/Consultation';
 import Footer from './components/Footer';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <TechSpecs />
       <Testimonials />
       <Partner2 />
+      <Consultation />
       <Footer />
     </div>
   );

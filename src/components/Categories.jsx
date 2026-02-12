@@ -9,35 +9,28 @@ const categories = [
     subtitle: "Maximaler Einwegschutz",
     size: "large",
     image: "https://assets.watara.services/xt/assets/coverchem200.jpg",
-    link: "#",
+    link: "https://www.xt-trade.com/Arbeitsschutz-Einweg-Bekleidung",
     products: [
       {
         id: 1,
         name: "Overall Type 5/6 Weiß",
         image: "https://assets.watara.services/xt/assets/cp500.jpg",
-        price: "12,90 €",
-        link: "#"
+        price: "Mehr erfahren",
+        link: "https://www.xt-trade.com/Overalls"
       },
       {
         id: 2,
         name: "Nitrilhandschuhe Blau",
         image: "https://assets.watara.services/xt/assets/nitrilhandschuhe.jpg",
-        price: "15,90 €",
-        link: "#"
+        price: "Mehr erfahren",
+        link: "https://www.xt-trade.com/Handschuhe_2"
       },
       {
         id: 3,
         name: "Chemikalienschutz XL",
         image: "https://assets.watara.services/xt/assets/schutzanzug.jpg",
-        price: "24,90 €",
-        link: "#"
-      },
-      {
-        id: 4,
-        name: "Leichtschutz Einweg",
-        image: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=400&auto=format&fit=crop",
-        price: "9,90 €",
-        link: "#"
+        price: "Mehr erfahren",
+        link: "https://www.xt-trade.com/Overalls"
       }
     ]
   },
@@ -47,28 +40,28 @@ const categories = [
     subtitle: "Robust & Komfortabel",
     size: "small",
     image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop",
-    link: "#",
+    link: "https://www.xt-trade.com/Berufsbekleidung",
     products: [
       {
         id: 1,
         name: "Arbeitshose Stretch",
         image: "https://assets.watara.services/xt/assets/hose-stretch.jpg",
-        price: "79,90 €",
-        link: "#"
+        price: "Mehr erfahren ",
+        link: "https://www.xt-trade.com/Bundhosen"
       },
       {
         id: 2,
         name: "Moderne Bundjacke",
         image: "https://assets.watara.services/xt/assets/jacke-stretch.jpg",
-        price: "129,00 €",
-        link: "#"
+        price: "Mehr erfahren",
+        link: "https://www.xt-trade.com/Bundjacken"
       },
       {
         id: 3,
         name: "Warnschutz Weste",
         image: "https://assets.watara.services/xt/assets/warnschutzweste.jpg",
-        price: "34,90 €",
-        link: "#"
+        price: "Mehr erfahren",
+        link: "https://www.xt-trade.com/warnschutz-weste-neongelbhtml"
       }
     ]
   },
@@ -78,34 +71,34 @@ const categories = [
     subtitle: "Safety First",
     size: "small",
     image: "https://images.unsplash.com/photo-1591955506264-3f5a6834570a?q=80&w=2070&auto=format&fit=crop",
-    link: "#",
+    link: "https://www.xt-trade.com/Sicherheitsschuhe",
     products: [
       {
         id: 1,
         name: "S3 Sicherheitsschuh Pro",
         image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=400&auto=format&fit=crop",
-        price: "89,90 €",
-        link: "#"
+        price: "Mehr erfahren",
+        link: "https://www.xt-trade.com/S3"
       },
       {
         id: 2,
         name: "Schutzhelm Modern",
         image: "https://assets.watara.services/xt/assets/schutzhelm.jpg",
-        price: "24,90 €",
-        link: "#"
+        price: "Mehr erfahren",
+        link: "https://www.xt-trade.com/PE-Schutzhelm-6-Punkt-Textilbaenderung-EN397"
       },
       {
         id: 3,
         name: "Schnittschutz Handschuhe",
         image: "https://assets.watara.services/xt/assets/handschuhe.jpg",
-        price: "19,90 €",
-        link: "#"
+        price: "Mehr erfahren",
+        link: "https://www.xt-trade.com/Schnittschutzhandschuh-Stufe-5PU-Beschichtung-grau-eco"
       }
     ]
   }
 ];
 
-const ProductPopup = ({ products, categoryTitle }) => {
+const ProductPopup = ({ products, categoryTitle, categoryLink }) => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
@@ -139,7 +132,7 @@ const ProductPopup = ({ products, categoryTitle }) => {
               <h5 className="text-sm font-bold text-slate-900 mb-2 line-clamp-2 group-hover/item:text-accent transition-colors">
                 {product.name}
               </h5>
-              <p className="text-lg font-extrabold text-accent">{product.price}</p>
+              <p className="text-sm font-extrabold text-accent">{product.price}</p>
             </div>
           </a>
         ))}
@@ -147,7 +140,7 @@ const ProductPopup = ({ products, categoryTitle }) => {
 
       {/* View All Link */}
       <a
-        href="#"
+        href={categoryLink}
         className="flex items-center justify-center gap-2 px-8 py-3 bg-white text-slate-900 font-bold text-sm rounded-lg hover:bg-accent hover:text-white transition-colors duration-300 shadow-lg"
       >
         Alle Produkte ansehen
@@ -207,6 +200,7 @@ const CategoryCard = ({ category, index, isHovered, onHoverChange }) => {
           <ProductPopup
             products={category.products}
             categoryTitle={category.title}
+            categoryLink={category.link}
           />
         )}
       </AnimatePresence>
@@ -219,8 +213,6 @@ const Categories = () => {
 
   return (
     <section className="py-24 bg-white relative overflow-hidden">
-       {/* Background Elements - Subtle Grey */}
-       <div className="absolute top-0 right-0 w-1/3 h-full bg-gray-50 -skew-x-12 pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
@@ -238,14 +230,19 @@ const Categories = () => {
             </p>
           </motion.div>
 
-          <motion.button
+          <motion.a
+             href="#beratung"
+             onClick={(e) => {
+               e.preventDefault();
+               document.getElementById('beratung')?.scrollIntoView({ behavior: 'smooth' });
+             }}
              initial={{ opacity: 0, x: 50 }}
              whileInView={{ opacity: 1, x: 0 }}
              viewport={{ once: true }}
-             className="hidden md:flex items-center gap-2 text-slate-800 font-bold border-b-2 border-accent pb-1 hover:text-accent transition-colors"
+             className="hidden md:flex items-center gap-2 text-slate-800 font-bold border-b-2 border-accent pb-1 hover:text-accent transition-colors cursor-pointer"
           >
-            Alle Kategorien ansehen <ArrowUpRight size={18} />
-          </motion.button>
+            Gemeinsam lösen <ArrowUpRight size={18} />
+          </motion.a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px] md:auto-rows-[400px]">

@@ -113,7 +113,7 @@ const Story = () => {
                  },
                  {
                    title: "Komplettservice: Veredelung & Logistik",
-                   text: "Wir übernehmen die komplette Veredelung Ihrer Arbeitskleidung mit Stick, Transfer oder Siebdruck. Dezentrale Lieferkonzepte direkt an Ihre Standorte reduzieren Aufwände und sichern kurze Lieferzeiten.",
+                   text: "Wir übernehmen die komplette Veredelung Ihrer Arbeitskleidung mit Transfer oder Siebdruck. Dezentrale Lieferkonzepte direkt an Ihre Standorte reduzieren Aufwände und sichern kurze Lieferzeiten.",
                    icon: Package
                  },
                  {
